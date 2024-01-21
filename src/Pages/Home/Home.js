@@ -4,6 +4,8 @@ import Welcome from './Welcome/Welcome';
 import Offers from './Offers/Offers';
 import Classes from './Classes/Classes';
 import Services from './Services/Services';
+import PriceCard from './PriceCard/PriceCard';
+import Reviews from './Reviews/Reviews';
 
 const Home = () => {
     return (
@@ -13,6 +15,8 @@ const Home = () => {
             <Offers />
             <Classes />
             <Services />
+            <Reviews />
+            <PriceCard />
         </div>
     );
 };

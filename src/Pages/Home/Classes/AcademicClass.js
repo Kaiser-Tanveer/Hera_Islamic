@@ -5,6 +5,7 @@ import profile from '../../../Assets/academicProfile.jpg';
 const AcademicClass = () => {
     const classDetails = [
         {
+            id: "01",
             name: "Nursery",
             lessons: "10",
             duration: "15 weeks",
@@ -12,6 +13,7 @@ const AcademicClass = () => {
             details: "There are many variations of Quran class available online"
         },
         {
+            id: "02",
             name: "KG",
             lessons: "10",
             duration: "15 weeks",
@@ -19,6 +21,7 @@ const AcademicClass = () => {
             details: "There are many variations of Quran class available online"
         },
         {
+            id: "03",
             name: "Class-1",
             lessons: "10",
             duration: "15 weeks",
@@ -26,6 +29,7 @@ const AcademicClass = () => {
             details: "There are many variations of Quran class available online"
         },
         {
+            id: "04",
             name: "Class-2",
             lessons: "10",
             duration: "15 weeks",
@@ -33,7 +37,24 @@ const AcademicClass = () => {
             details: "There are many variations of Quran class available online"
         },
         {
+            id: "05",
             name: "Class-3",
+            lessons: "10",
+            duration: "15 weeks",
+            students: "30",
+            details: "There are many variations of Quran class available online"
+        },
+        {
+            id: "06",
+            name: "Class-4",
+            lessons: "10",
+            duration: "15 weeks",
+            students: "30",
+            details: "There are many variations of Quran class available online"
+        },
+        {
+            id: "07",
+            name: "Class-5",
             lessons: "10",
             duration: "15 weeks",
             students: "30",
