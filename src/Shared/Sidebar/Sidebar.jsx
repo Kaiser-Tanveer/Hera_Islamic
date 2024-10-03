@@ -228,6 +228,18 @@ const Sidebar = () => {
                             </NavLink>
                         </div>
                     }
+                    <NavLink to="/notice" className={({isActive}) => 
+                    isActive ? "flex items-center border-b border-gray-200 px-4 py-2 text-blue-500 duration-500"
+                    :
+                    "flex items-center border-b border-gray-200 hover:border-white hover:bg-blue-50 px-4 py-2 duration-500"
+                    }><span>Notice</span>
+                    </NavLink>
+                    <NavLink to="/users" className={({isActive}) => 
+                    isActive ? "flex items-center border-b border-gray-200 px-4 py-2 text-blue-500 duration-500"
+                    :
+                    "flex items-center border-b border-gray-200 hover:border-white hover:bg-blue-50 px-4 py-2 duration-500"
+                    }><span>Users</span>
+                    </NavLink>
             </div>
         </aside>
     );

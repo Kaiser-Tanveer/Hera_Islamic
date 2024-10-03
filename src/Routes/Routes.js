@@ -18,12 +18,13 @@ import AddExpense from "../Pages/Account/AddExpense/AddExpense";
 import AllClasses from "../Pages/Classes/AllClasses/AllClasses";
 import AddClasses from "../Pages/Classes/AddClasses/AddClasses";
 import Subjects from "../Pages/Subjects/Subjects";
-import AddRoutine from "../Pages/ClassRoutines/AddRoutine";
 import ClassRoutine from "../Pages/ClassRoutines/ClassRoutine";
-import StudentAttendance from "../Pages/Attendance/StudentAttendance/StudentAttendance";
 import Attendance from "../Pages/Attendance/Attendance";
 import Examinations from "../Pages/Exams/ExamSchedules/Examinations";
 import ExamGrades from "../Pages/Exams/ExamGrades/ExamGrades";
+import Notice from "../Pages/Notice/Notice";
+import Users from "../Pages/Users/Users";
+import SingleUser from "../Pages/Users/AllUsers/SingleUser";
 
 const Router = createBrowserRouter([
     {
@@ -117,6 +118,18 @@ const Router = createBrowserRouter([
             {
                 path: '/grades',
                 element: <ExamGrades/>
+            },
+            {
+                path: '/notice',
+                element: <Notice/>
+            },
+            {
+                path: '/users',
+                element: <Users/>
+            },
+            {
+                path: '/singleUsers',
+                element: <SingleUser/>
             },
             // {
             //     path: '/logIn',
