@@ -1,0 +1,51 @@
+[
+    {
+        "Date": "2024-10-01",
+        "Description": "Midterm exam schedule has been released. Please check the portal for details.",
+        "Author": "Dr. Emily Johnson",
+        "Course": "Mathematics 101",
+        "Urgency": "High"
+    },
+    {
+        "Date": "2024-10-05",
+        "Description": "Guest lecture on Modern Physics by Dr. Alan Turing. All are welcome!",
+        "Author": "Prof. Sarah Smith",
+        "Course": "Physics 202",
+        "Urgency": "Medium"
+    },
+    {
+        "Date": "2024-10-10",
+        "Description": "Reminder: Project submission deadline is approaching. Ensure you submit by next week.",
+        "Author": "Ms. Laura Lee",
+        "Course": "Computer Science 301",
+        "Urgency": "High"
+    },
+    {
+        "Date": "2024-10-12",
+        "Description": "Join the academic writing workshop this Friday. Sign up on the website.",
+        "Author": "Dr. Mark Brown",
+        "Course": "English Literature 101",
+        "Urgency": "Low"
+    },
+    {
+        "Date": "2024-10-15",
+        "Description": "New library resources are available for research. Visit the library for more info.",
+        "Author": "Ms. Lisa White",
+        "Course": "Research Methods",
+        "Urgency": "Medium"
+    },
+    {
+        "Date": "2024-10-20",
+        "Description": "Field trip to the Science Museum scheduled for next month. Permission slips required.",
+        "Author": "Mr. John Green",
+        "Course": "Biology 202",
+        "Urgency": "Medium"
+    },
+    {
+        "Date": "2024-10-25",
+        "Description": "Final exam review sessions will begin next week. Please check the schedule.",
+        "Author": "Dr. Anna Black",
+        "Course": "Chemistry 102",
+        "Urgency": "High"
+    }
+]

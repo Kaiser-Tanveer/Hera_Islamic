@@ -39,7 +39,7 @@ const TeacherPayment = () => {
                         <td className='p-2 text-nowrap'>14</td>
                         <td className='p-2 text-nowrap'>English</td>
                         <td className='p-2 text-nowrap'>50000</td>
-                        <td className='p-2 text-nowrap'><span className='bg-blue-500 rounded-md py-1 px-4 text-white'>Paid</span></td>
+                        <td className='p-2 text-nowrap'><span className='bg-sky-500 rounded-md py-1 px-4 text-white'>Paid</span></td>
                         <td className='p-2 text-nowrap'>Abdul Halim</td>
                         <td className='p-2 text-nowrap'>018XXXXXXXXX</td>
                         <td className='pl-2 py-2 text-nowrap'>xyz@gmail.com</td>

@@ -1,7 +1,10 @@
+import moment from 'moment/moment';
 import React from 'react';
 import { useForm } from 'react-hook-form';
 
 const AdmissionForm = () => {
+    const imageHostKey = process.env.REACT_APP_IMG_KEY;
+    console.log(imageHostKey);
     const {
         register,
         handleSubmit,
@@ -9,12 +12,54 @@ const AdmissionForm = () => {
         formState: { errors },
       } = useForm()
     
-      const onSubmit = (data) => console.log(data)
+      const admissionFormHandler = (data) => {
+        const postedDate = moment().format('MMMM Do YYYY, h:mm:ss a');
+        console.log(postedDate);
+        
+        const image = data.img[0];
+        const formData = new FormData();
+        console.log(formData);
+        formData.append('image', image);
+        const url = `https://api.imgbb.com/1/upload?key=${imageHostKey}`;
+
+        fetch(url, {
+            method: 'POST',
+            body: formData
+        })
+            .then(res => res.json())
+            .then(imgData => {
+                if (imgData.success) {
+                    const image = imgData.data.url;
+                    const postedData = {
+                    }
+                    console.log(image);
+
+
+                    // fetch('https://fb-demo-server.vercel.app/posts', {
+                    //     method: 'POST',
+                    //     headers: {
+                    //         'content-type': 'application/json'
+                    //     },
+                    //     body: JSON.stringify(postedData)
+                    // })
+                    //     .then(res => res.json())
+                    //     .then(data => {
+                    //         console.log(data);
+                    //         toast.success('Posted Successfully!');
+                    //         navigate('/');
+                    //     })
+                    //     .catch(error => {
+                    //         toast.error(error.message);
+                    //         navigate('/');
+                    //     })
+                }
+            });
+      }
     return (
         <div className='bg-white p-6 rounded-md rounded-e-md h-[95vh]'>
         <h2 className='pb-6 text-xl font-bold'>Add New Students</h2>
             <div>
-                <form onSubmit={handleSubmit(onSubmit)}>
+                <form onSubmit={handleSubmit(admissionFormHandler)}>
                     <div className='w-full flex items-center justify-between gap-12 mb-6'>
                         <div className='w-full'>
                         <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-first-name">
@@ -103,7 +148,7 @@ const AdmissionForm = () => {
                         </label>
                         <input 
                         {...register("mail")}
-                        class="appearance-none block w-full bg-gray-100 text-gray-700 border rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white" type="email" placeholder="Jane"/>
+                        class="appearance-none block w-full bg-gray-100 text-gray-700 border rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white" type="email" placeholder="xyz@gmail.com"/>
                         {errors.mail && <span className='text-red-500 text-sm'>This field is required</span>}
                         </div>
                     </div>
@@ -174,14 +219,14 @@ const AdmissionForm = () => {
                         Upload Student Photo (150px X 150px) <span className='text-red-500'>*</span>
                         </label>
                         <input
-                        {...register("pp", { required: true })}
-                         class="appearance-none block w-full text-gray-700 rounded-md py-3 px-4 leading-tight focus:outline-none focus:bg-white" type="file" placeholder="Add Photo"/>
-                        {errors.pp && <span className='text-red-500 text-sm'>This field is required</span>}
+                        {...register("img", { required: true })}
+                         class="appearance-none block w-full text-gray-700 rounded-md py-3 px-4 leading-tight focus:outline-none focus:bg-white" type="file" accept='image/*' placeholder="Add Photo"/>
+                        {errors.img && <span className='text-red-500 text-sm'>This field is required</span>}
                         </div>
                     </div>
                     <div className='flex items-center justify-start gap-6 my-8'>
-                    <input type="submit" value="SUBMIT" className='h-12 w-32 bg-blue-500 text-white font-semibold rounded-md border border-white hover:border-blue-500 hover:bg-white hover:text-blue-500 duration-500'/>
-                    <input type="reset" value="RESET" className='h-12 w-32 border text-blue-500 border-blue-500 font-semibold rounded-md hover:bg-blue-500 hover:text-white duration-500'/>
+                    <input type="submit" value="SUBMIT" className='h-12 w-32 bg-sky-500 text-white font-semibold rounded-md border border-white hover:border-sky-500 hover:bg-white hover:text-sky-500 duration-500'/>
+                    <input type="reset" value="RESET" className='h-12 w-32 border text-sky-500 border-sky-500 font-semibold rounded-md hover:bg-sky-500 hover:text-white duration-500'/>
                     </div>
                 </form>
             </div>

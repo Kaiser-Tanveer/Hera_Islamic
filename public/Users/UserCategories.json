@@ -1,0 +1,29 @@
+{
+    "UserCategories": [
+        {
+            "id": "01",
+            "UserType": "Super Admin",
+            "Description": "Users with full access to manage the system."
+        },
+        {
+            "id": "02",
+            "UserType": "Admin",
+            "Description": "Users who manage content and moderate activity."
+        },
+        {
+            "id": "03",
+            "UserType": "Teacher",
+            "Description": "Facilitators of learning who create and manage classes."
+        },
+        {
+            "id": "04",
+            "UserType": "Parent",
+            "Description": "Users who monitor their children's progress."
+        },
+        {
+            "id": "05",
+            "UserType": "Student",
+            "Description": "Users enrolled in the institution, accessing educational resources."
+        }
+    ]
+}

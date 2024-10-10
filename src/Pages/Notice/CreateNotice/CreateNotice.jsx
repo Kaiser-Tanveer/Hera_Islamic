@@ -12,7 +12,7 @@ const CreateNotice = () => {
       const onSubmit = (data) => console.log(data)
     return (
         <div className='bg-white p-6 rounded-md rounded-e-md h-[80vh]'>
-        <h2 className='pb-6 text-xl font-bold'>Create New Notice</h2>
+            <h2 className='pb-6 text-xl font-bold'>Create New Notice</h2>
             <div>
             <form onSubmit={handleSubmit(onSubmit)}>
                     <div className='w-full flex items-start justify-between gap-12 mb-6'>
@@ -65,8 +65,8 @@ const CreateNotice = () => {
                     </div>
 
                     <div className='flex items-center justify-start gap-6 my-8'>
-                    <input type="submit" value="SUBMIT" className='h-12 w-32 bg-blue-500 text-white font-semibold rounded-md border border-white hover:border-blue-500 hover:bg-white hover:text-blue-500 duration-500'/>
-                    <input type="reset" value="RESET" className='h-12 w-32 border text-blue-500 border-blue-500 font-semibold rounded-md hover:bg-blue-500 hover:text-white duration-500'/>
+                    <input type="submit" value="SUBMIT" className='h-12 w-32 bg-sky-500 text-white font-semibold rounded-md border border-white hover:border-sky-500 hover:bg-white hover:text-sky-500 duration-500'/>
+                    <input type="reset" value="RESET" className='h-12 w-32 border text-sky-500 border-sky-500 font-semibold rounded-md hover:bg-sky-500 hover:text-white duration-500'/>
                     </div>
                 </form>
             </div>

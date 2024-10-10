@@ -73,8 +73,8 @@ const StudentPromotion = () => {
                 </div>  
             </div>
             <div className='flex items-center justify-start gap-6 my-10'>
-                <input type="submit" value="SUBMIT" className='h-12 w-32 bg-blue-500 text-white font-semibold rounded-md'/>
-                <input type="reset" value="RESET" className='h-12 w-32 border text-blue-500 border-blue-500 font-semibold rounded-md'/>
+                <input type="submit" value="SUBMIT" className='h-12 w-32 bg-sky-500 text-white font-semibold rounded-md'/>
+                <input type="reset" value="RESET" className='h-12 w-32 border text-sky-500 border-sky-500 font-semibold rounded-md'/>
             </div>
         </form>
         </div>

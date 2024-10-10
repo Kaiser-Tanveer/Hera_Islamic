@@ -4,7 +4,7 @@ import AllExamSchedules from './AllExamSchedules/AllExamSchedules';
 
 const Examinations = () => {
     return (
-        <div className='bg-gray-50'>
+        <div className='bg-gray-50 h-[96vh] overflow-auto'>
             <AddExamSchedule/>
             <div className='mt-10'>
                 <AllExamSchedules/>

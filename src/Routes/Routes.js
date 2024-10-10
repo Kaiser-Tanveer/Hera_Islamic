@@ -128,9 +128,27 @@ const Router = createBrowserRouter([
                 element: <Users/>
             },
             {
-                path: '/singleUsers',
-                element: <SingleUser/>
-            },
+                path: '/singleUser/:id',
+                element: <SingleUser />,
+                loader: async ({ params }) => {
+                    const response = await fetch('/Users/Users.json');
+                    if (!response.ok) {
+                        throw new Response('User data not found', { status: 404 });
+                    }
+                
+                    const users = await response.json();
+                    const user = users?.find(user => user?.id === params?.id);
+                    console.log(user);
+                
+                    if (!user) {
+                        throw new Response('User not found', { status: 404 });
+                    }
+                
+                    return user;
+                }
+                
+            }
+            
             // {
             //     path: '/logIn',
             //     element: <LogIn />

@@ -1,0 +1,65 @@
+[
+    {
+        "ID": 1,
+        "ExamName": "Class Test",
+        "Subject": "Mathematics",
+        "Class": "5",
+        "Section": "A",
+        "Time": "09:00 AM",
+        "Date": "2024-11-01"
+    },
+    {
+        "ID": 2,
+        "ExamName": "Final",
+        "Subject": "Science",
+        "Class": "5",
+        "Section": "A",
+        "Time": "11:00 AM",
+        "Date": "2024-11-03"
+    },
+    {
+        "ID": 3,
+        "ExamName": "Annual",
+        "Subject": "English",
+        "Class": "5",
+        "Section": "B",
+        "Time": "01:00 PM",
+        "Date": "2024-11-05"
+    },
+    {
+        "ID": 4,
+        "ExamName": "Class Test",
+        "Subject": "History",
+        "Class": "5",
+        "Section": "B",
+        "Time": "10:00 AM",
+        "Date": "2024-11-07"
+    },
+    {
+        "ID": 5,
+        "ExamName": "Class Test",
+        "Subject": "Geography",
+        "Class": "5",
+        "Section": "A",
+        "Time": "02:00 PM",
+        "Date": "2024-11-09"
+    },
+    {
+        "ID": 6,
+        "ExamName": "Final",
+        "Subject": "Art",
+        "Class": "5",
+        "Section": "A",
+        "Time": "10:30 AM",
+        "Date": "2024-11-11"
+    },
+    {
+        "ID": 7,
+        "ExamName": "Final",
+        "Subject": "Physical Education",
+        "Class": "5",
+        "Section": "B",
+        "Time": "01:30 PM",
+        "Date": "2024-11-13"
+    }
+]

@@ -1,0 +1,58 @@
+[
+    {
+        "id": "01",
+        "Grade": "A+",
+        "Point": 4.0,
+        "PercentageFrom": 90,
+        "PercentageTo": 100,
+        "Comments": "Outstanding performance"
+    },
+    {
+        "id": "02",
+        "Grade": "A",
+        "Point": 3.7,
+        "PercentageFrom": 80,
+        "PercentageTo": 89,
+        "Comments": "Excellent work"
+    },
+    {
+        "id": "03",
+        "Grade": "B+",
+        "Point": 3.3,
+        "PercentageFrom": 75,
+        "PercentageTo": 79,
+        "Comments": "Very good effort"
+    },
+    {
+        "id": "04",
+        "Grade": "B",
+        "Point": 3.0,
+        "PercentageFrom": 70,
+        "PercentageTo": 74,
+        "Comments": "Good performance"
+    },
+    {
+        "id": "05",
+        "Grade": "C+",
+        "Point": 2.7,
+        "PercentageFrom": 65,
+        "PercentageTo": 69,
+        "Comments": "Satisfactory work"
+    },
+    {
+        "id": "06",
+        "Grade": "C",
+        "Point": 2.0,
+        "PercentageFrom": 60,
+        "PercentageTo": 64,
+        "Comments": "Needs improvement"
+    },
+    {
+        "id": "07",
+        "Grade": "F",
+        "Point": 0.0,
+        "PercentageFrom": 0,
+        "PercentageTo": 59,
+        "Comments": "Failed"
+    }
+]

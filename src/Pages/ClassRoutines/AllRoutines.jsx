@@ -9,7 +9,7 @@ const AllRoutines = () => {
     return (
         <div className='bg-white rounded-md p-4'>
             <h3 className='py-4 font-bold text-xl'>All Routines</h3>
-            <div className='overflow-auto h-[20vh]'>
+            <div className=''>
                 <table className="border border-gray-200 w-full">
                     <thead>
                         <tr>

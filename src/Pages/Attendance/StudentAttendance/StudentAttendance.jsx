@@ -33,7 +33,7 @@ const StudentAttendance = () => {
                                 <td className='p-2 text-nowrap'>{student}. Unknown Name</td>
                                 {
                                     days.map(row => (
-                                        <td key={row} className='text-center pr-2 py-2 text-nowrap text-blue-500 px-2'>
+                                        <td key={row} className='text-center pr-2 py-2 text-nowrap text-sky-500 px-2'>
                                             <TiTick />
                                         </td>
                                     ))

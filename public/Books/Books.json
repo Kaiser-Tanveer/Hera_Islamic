@@ -1,0 +1,65 @@
+[
+    {
+        "ID": 1,
+        "BookName": "Mathematics for Class 5",
+        "Subject": "Mathematics",
+        "Writer": "John Doe",
+        "Class": "5",
+        "PublishedDate": "2018-05-01",
+        "CreatingDate": "2017-12-15"
+    },
+    {
+        "ID": 2,
+        "BookName": "English Grammar Essentials",
+        "Subject": "English",
+        "Writer": "Alice Johnson",
+        "Class": "5",
+        "PublishedDate": "2019-06-10",
+        "CreatingDate": "2018-01-20"
+    },
+    {
+        "ID": 3,
+        "BookName": "Introduction to Science",
+        "Subject": "Science",
+        "Writer": "Robert Brown",
+        "Class": "5",
+        "PublishedDate": "2020-08-15",
+        "CreatingDate": "2019-04-05"
+    },
+    {
+        "ID": 4,
+        "BookName": "History of the World",
+        "Subject": "History",
+        "Writer": "Emily Davis",
+        "Class": "5",
+        "PublishedDate": "2021-03-22",
+        "CreatingDate": "2020-10-30"
+    },
+    {
+        "ID": 5,
+        "BookName": "Fundamentals of Geography",
+        "Subject": "Geography",
+        "Writer": "Michael Wilson",
+        "Class": "5",
+        "PublishedDate": "2022-02-18",
+        "CreatingDate": "2021-07-12"
+    },
+    {
+        "ID": 6,
+        "BookName": "Creative Arts",
+        "Subject": "Art",
+        "Writer": "Sophia Garcia",
+        "Class": "5",
+        "PublishedDate": "2023-01-05",
+        "CreatingDate": "2022-09-08"
+    },
+    {
+        "ID": 7,
+        "BookName": "Physical Education Handbook",
+        "Subject": "Physical Education",
+        "Writer": "Daniel Martinez",
+        "Class": "5",
+        "PublishedDate": "2023-04-12",
+        "CreatingDate": "2022-11-20"
+    }
+]
