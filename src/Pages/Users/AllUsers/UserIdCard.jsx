@@ -1,5 +1,4 @@
 import React, { useState, useRef } from 'react';
-import html2canvas from 'html2canvas';
 import './UserIdCard.css';
 import { MdFlipCameraAndroid } from 'react-icons/md';
 
@@ -11,17 +10,84 @@ const UserIdCard = ({ user }) => {
         setFlipped(!flipped);
     };
 
-    const handleDownload = () => {
-        if (cardRef.current) {
-            html2canvas(cardRef.current, { scale: 2 }).then((canvas) => {
-                const link = document.createElement('a');
-                link.href = canvas.toDataURL('image/png');
-                link.download = `${user?.Name}-id-card.png`;
-                link.click();
-            });
-        }
+    const handlePrint = () => {
+        const printWindow = window.open('', '_blank');
+        const content = `
+            <div style="font-family: Arial, sans-serif; margin: 20px;">
+                    <h1 style="text-align: center; color: #1D4ED8; background-color: red;">Hera Islamic Academy</h1>
+                    <div style="text-align: center; margin-bottom: 20px;">
+                        <img src="${user?.Photo}" alt="${user?.Name}" style="width: 50%; border-radius: 8px; border: 8px solid #1D4ED8;" />
+                    </div>
+                <p style="text-align: center; font-style: italic;">SIGNATURE</p>
+                <div style="margin: 10px 0;">
+                    <div style="display: flex; justify-content: space-between;">
+                        <span>Name:</span>
+                        <span>${user?.Name}</span>
+                    </div>
+                    ${user?.UserType === "Student" ? `
+                        <div style="display: flex; justify-content: space-between;">
+                            <span>Class:</span>
+                            <span>${user?.Class} (${user?.Section})</span>
+                        </div>
+                    ` : `
+                        <p style="text-align: center; font-weight: bold;">(${user?.UserType})</p>
+                    `}
+                    <div style="display: flex; justify-content: space-between;">
+                        <span>ID No.:</span>
+                        <span>${user?.id}</span>
+                    </div>
+                    <div style="display: flex; justify-content: space-between;">
+                        <span>Phone:</span>
+                        <span>${user?.Phone}</span>
+                    </div>
+                    <div style="display: flex; justify-content: space-between;">
+                        <span>Address:</span>
+                        <span>${user?.Address}</span>
+                    </div>
+                </div>
+                <p style="text-align: center; margin-top: 20px;">Location: Beside Jan Muhammad Mosque, Arakan Housing Society, Badurtola, Shulokbahar, Bahaddarhat, Chattogram.</p>
+                <p style="text-align: center;">Contact: <a href="tel:01xxxxxxxxx">01xxxxxxxxx</a></p>
+            </div>
+        `;
+    
+        printWindow.document.write(`
+            <html>
+                <head>
+                    <title>Print User ID Card</title>
+                    <style>
+                        body {
+                            margin: 0;
+                            padding: 20px;
+                            font-family: Arial, sans-serif;
+                        }
+                        .card {
+                            width: 100%;
+                            height: 800px;
+                            max-width: 400px;
+                            margin: auto;
+                            border: 2px solid black;
+                        }
+                        h4, p {
+                            margin: 0;
+                        }
+                        @media print {
+                            .card {
+                                background-color: #1D4ED8; /* Set background color for print */
+                            }
+                        }
+                    </style>
+                </head>
+                <body>
+                    <div class="card">${content}</div>
+                </body>
+            </html>
+        `);
+        printWindow.document.close();
+        printWindow.focus();
+        printWindow.print();
+        printWindow.close();
     };
-
+    
     return (
         <div className='rounded-md h-full group'>
             <div ref={cardRef} className={`card-inner rounded-md ${flipped ? 'rotateY-180' : ''}`}>
@@ -30,10 +96,10 @@ const UserIdCard = ({ user }) => {
                     <button onClick={handleFlip} className='absolute top-2 right-2 bg-transparent'>
                         <MdFlipCameraAndroid className='text-2xl font-extrabold text-white bg-transparent hover:animate-spin duration-500 rounded-full'/>
                     </button>
-                    <button onClick={handleDownload} className='absolute top-2 left-2 bg-transparent'>
-                        <span className='text-2xl font-extrabold text-white'>⬇️</span> {/* Simple download icon */}
+                    <button onClick={handlePrint} className='absolute top-2 left-2 bg-transparent'>
+                        <span className='text-2xl font-extrabold text-white'>🖨️</span> {/* Print icon */}
                     </button>
-                    <div className={user?.UserType === "Student" ? 'bg-sky-500 h-[160px] mb-[90px] rounded-t-md' : 'bg-gray-500 h-[160px] mb-[90px] rounded-t-md'}>
+                    <div className={user?.UserType === "Student" ? 'card bg-sky-500 h-[160px] mb-[90px] rounded-t-md' : 'card bg-gray-500 h-[160px] mb-[90px] rounded-t-md'}>
                         <h4 className='text-xl text-center font-bold py-6 text-white rounded-t-md'>Hera Islamic Academy</h4>
                         <img src={user?.Photo} alt={user?.Name} className={user?.UserType === "Student" ? 'w-[50%] mx-auto rounded-t-md border-8 border-sky-200 p-2 bg-white' : 'w-[50%] mx-auto rounded-t-md border-8 border-gray-700 p-2 bg-gray-50'} />
                     </div>

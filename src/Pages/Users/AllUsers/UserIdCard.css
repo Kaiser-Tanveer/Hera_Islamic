@@ -1,3 +1,54 @@
+@media print {
+    /* Hide unwanted elements */
+    .sidebar,
+    .navbar,
+    .footer,
+    .sideArticle {
+        display: none;
+    }
+
+    /* Ensure the UserIdCard is visible */
+    .user-id-card {
+        display: block !important; /* Make sure it's displayed */
+        background: white !important; /* Set background to white */
+    }
+
+    /* Remove transformations for printing */
+    .card-inner {
+        transform: none !important; /* Disable flip effects */
+        backface-visibility: visible !important; /* Ensure text is visible */
+    }
+
+    /* Hide any other background images or colors */
+    body {
+        background: white !important; /* Set body background to white */
+        color: black !important; /* Set text color to black for print */
+    }
+
+    /* Ensure all text is printed in black */
+    * {
+        color: black !important;
+    }
+}
+
+.custom-underline {
+    position: relative;
+    display: inline-block;
+    color: inherit;
+}
+
+.custom-underline::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 4px;
+    background-color: rgb(186 230 253);
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+}
+
+
 .card-inner {
     position: relative;
     text-align: center;
@@ -18,8 +69,8 @@
     left: 0;
     top: 0;
     backface-visibility: hidden;
-    width: 100%;   /* Make sure both sides take the full width */
-    height: 100%;  /* Make sure both sides take the full height */
+    width: 100%;
+    height: 100%;
     border-radius: 15px;
 }
 

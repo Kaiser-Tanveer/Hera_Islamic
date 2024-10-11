@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { HiChevronDoubleRight, HiChevronDown, HiChevronUp } from 'react-icons/hi';
 import { NavLink } from 'react-router-dom';
+import '../../Pages/Users/AllUsers/UserIdCard.css';
 
 const Sidebar = () => {
     const [stuOpen, setStuOpen] = useState(false);
@@ -10,7 +11,7 @@ const Sidebar = () => {
     const [classesOpen, setClassesOpen] = useState(false);
     const [examOpen, setExamOpen] = useState(false);
     return (
-        <aside className='w-full h-[100vh] overflow-auto pr-6 pb-6'>
+        <aside className='sidebar w-full h-[100vh] overflow-auto pr-6 pb-6'>
             <div className='w-full flex flex-col gap-2'>
                 <NavLink to="/dashboard"  className={({isActive}) => 
                 isActive ? "border-b border-gray-200 px-4 py-2 text-sky-500 duration-500"
