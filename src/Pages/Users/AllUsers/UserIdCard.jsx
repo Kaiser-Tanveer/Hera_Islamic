@@ -13,40 +13,42 @@ const UserIdCard = ({ user }) => {
     const handlePrint = () => {
         const printWindow = window.open('', '_blank');
         const content = `
-            <div style="font-family: Arial, sans-serif; margin: 20px;">
-                    <h1 style="text-align: center; color: #1D4ED8; background-color: red;">Hera Islamic Academy</h1>
-                    <div style="text-align: center; margin-bottom: 20px;">
-                        <img src="${user?.Photo}" alt="${user?.Name}" style="width: 50%; border-radius: 8px; border: 8px solid #1D4ED8;" />
-                    </div>
-                <p style="text-align: center; font-style: italic;">SIGNATURE</p>
-                <div style="margin: 10px 0;">
-                    <div style="display: flex; justify-content: space-between;">
-                        <span>Name:</span>
-                        <span>${user?.Name}</span>
-                    </div>
-                    ${user?.UserType === "Student" ? `
-                        <div style="display: flex; justify-content: space-between;">
-                            <span>Class:</span>
-                            <span>${user?.Class} (${user?.Section})</span>
-                        </div>
-                    ` : `
-                        <p style="text-align: center; font-weight: bold;">(${user?.UserType})</p>
-                    `}
-                    <div style="display: flex; justify-content: space-between;">
-                        <span>ID No.:</span>
-                        <span>${user?.id}</span>
-                    </div>
-                    <div style="display: flex; justify-content: space-between;">
-                        <span>Phone:</span>
-                        <span>${user?.Phone}</span>
-                    </div>
-                    <div style="display: flex; justify-content: space-between;">
-                        <span>Address:</span>
-                        <span>${user?.Address}</span>
+            <div style="font-family: Arial, sans-serif; height: 340px; width: 213px; margin: auto; border-radius: 12px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);">
+                <div style="background: #00bfff; width: 100%; padding-top: 10px; height: 120px; border-radius: 12px 12px 0 0;">
+                    <h1 style="text-align: center; color: #ffffff; font-size: 16px; font-weight: bold; background-color: transparent;">Hera Islamic Academy</h1>
+                    <div style="text-align: center;">
+                        <img src="${user?.Photo}" alt="${user?.Name}" style="width: 80px; height: 80px; margin: 0 auto; border-radius: 8px 8px 0 0; border: 8px solid rgb(3 105 161); background-color: #ffffff; padding: 8px;/>
                     </div>
                 </div>
-                <p style="text-align: center; margin-top: 20px;">Location: Beside Jan Muhammad Mosque, Arakan Housing Society, Badurtola, Shulokbahar, Bahaddarhat, Chattogram.</p>
-                <p style="text-align: center;">Contact: <a href="tel:01xxxxxxxxx">01xxxxxxxxx</a></p>
+                <div style="">
+                        <div style="width: 60%; margin: auto; margin-top: 6px; height: 4px; background: linear-gradient(to right, rgb(3 105 161), #00bfff, #8fdfeb)"></div>
+                        <div style="width: 60%; margin: auto; margin-top: 6px; display: flex; align-items: center; justify-content: between; font-size: 10px; ">
+                            <span style="width: 40%; text-align: left;">Name:</span>
+                            <span style="width: 60%; text-align: left; margin-left: 10px;">${user?.Name}</span>
+                        </div>
+                        ${user?.UserType === "Student" ? `
+                            <div style="width: 60%; margin: auto; margin-top: 4px; display: flex; align-items: center; justify-content: between; font-size: 10px;">
+                                <span style="width: 40%; text-align: left;">Class:</span>
+                                <span style="width: 60%; text-align: left; margin-left: 10px;">${user?.Class} (${user?.Section})</span>
+                            </div>
+                        ` : `
+                            <p style="text-align: center; font-weight: bold; padding: 6px; font-size: 10px; background-color: #8fdfeb;">(${user?.UserType})</p>
+                        `}
+                        <div style="width: 60%; margin: auto; margin-top: 4px; display: flex; align-items: center; justify-content: between; font-size: 10px;">
+                            <span style="width: 40%; text-align: left;">ID No.:</span>
+                            <span style="width: 60%; text-align: left; margin-left: 10px;">${user?.id}</span>
+                        </div>
+                        <div style="width: 60%; margin: auto; margin-top: 4px; display: flex; align-items: center; justify-content: between; font-size: 10px;">
+                            <span style="width: 40%; text-align: left;">Phone:</span>
+                            <span style="width: 60%; text-align: left; margin-left: 10px;">${user?.Phone}</span>
+                        </div>
+                        <div style="width: 60%; margin: auto; margin-top: 4px; display: flex; align-items: start; justify-content: between; font-size: 10px;">
+                            <span style="width: 40%; text-align: left;">Address:</span>
+                            <span style="width: 60%; text-align: left; margin-left: 10px;">${user?.Address}</span>
+                        </div>
+                    </div>
+                    <p style="width: 35%; margin-left: auto; margin-top: 36.5px; margin-bottom: 0; padding-bottom: 0; text-align: right; font-size: 8px; border-top: 1px solid #000000; margin-right: 2px">Authority's Signature</p>
+                    <div style="margin-top: 2px; padding-top: 0; height: 12px; background: linear-gradient(to right, rgb(3 105 161), #00bfff, #8fdfeb); border-radius: 0 0 12px 12px;"></div>
             </div>
         `;
     
@@ -59,26 +61,22 @@ const UserIdCard = ({ user }) => {
                             margin: 0;
                             padding: 20px;
                             font-family: Arial, sans-serif;
+                            background-color: #ffffff; /* White background for print */
                         }
-                        .card {
-                            width: 100%;
-                            height: 800px;
-                            max-width: 400px;
-                            margin: auto;
-                            border: 2px solid black;
+                        h1 {
+                            color: #00bfff; /* Text color */
+                            background-color: #00bfff; /* Background color */
+                            padding: 10px; /* Padding for visual balance */
                         }
-                        h4, p {
-                            margin: 0;
-                        }
-                        @media print {
-                            .card {
-                                background-color: #1D4ED8; /* Set background color for print */
-                            }
+                        img {
+                            width: 50%; /* Ensure the image scales */
+                            border-radius: 8px; /* Maintain border radius */
+                            border: 8px solid #00bfff; /* Border color */
                         }
                     </style>
                 </head>
                 <body>
-                    <div class="card">${content}</div>
+                    <div>${content}</div>
                 </body>
             </html>
         `);
@@ -87,6 +85,9 @@ const UserIdCard = ({ user }) => {
         printWindow.print();
         printWindow.close();
     };
+    
+    
+    
     
     return (
         <div className='rounded-md h-full group'>

@@ -1,4 +1,19 @@
 @media print {
+    body {
+        background-color: #ffffff; /* White background for print */
+    }
+    h1 {
+        color: #1D4ED8;
+        background-color: #1D4ED8;
+        padding: 10px;
+    }
+    /* Add other styles you want to apply during printing */
+}
+
+
+
+
+@media print {
     /* Hide unwanted elements */
     .sidebar,
     .navbar,
