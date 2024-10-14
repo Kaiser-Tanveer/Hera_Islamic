@@ -12,45 +12,58 @@ const UserIdCard = ({ user }) => {
 
     const handlePrint = () => {
         const printWindow = window.open('', '_blank');
-        const content = `
-            <div style="font-family: Arial, sans-serif; height: 340px; width: 213px; margin: auto; border-radius: 12px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);">
-                <div style="background: #00bfff; width: 100%; padding-top: 10px; height: 120px; border-radius: 12px 12px 0 0;">
-                    <h1 style="text-align: center; color: #ffffff; font-size: 16px; font-weight: bold; background-color: transparent;">Hera Islamic Academy</h1>
-                    <div style="text-align: center;">
-                        <img src="${user?.Photo}" alt="${user?.Name}" style="width: 80px; height: 80px; margin: 0 auto; border-radius: 8px 8px 0 0; border: 8px solid rgb(3 105 161); background-color: #ffffff; padding: 8px;/>
-                    </div>
+        const frontID = `
+        <div style="font-family: Arial, sans-serif; height: 340px; width: 213px; margin: auto; margin-top: 40vh; border-radius: 12px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);">
+            <div style="background: #00bfff; width: 100%; padding-top: 10px; height: 120px; border-radius: 12px 12px 0 0;">
+                <h1 style="text-align: center; color: #ffffff; font-size: 16px; font-weight: bold;">Hera Islamic Academy</h1>
+                <div style="text-align: center;">
+                    <img src="${user?.Photo}" alt="${user?.Name}" style="width: 80px; height: 80px; margin: 0 auto; border-radius: 8px 8px 0 0; border: 8px solid rgb(3 105 161); background-color: #ffffff; padding: 8px;"/>
                 </div>
-                <div style="">
-                        <div style="width: 60%; margin: auto; margin-top: 6px; height: 4px; background: linear-gradient(to right, rgb(3 105 161), #00bfff, #8fdfeb)"></div>
-                        <div style="width: 60%; margin: auto; margin-top: 6px; display: flex; align-items: center; justify-content: between; font-size: 10px; ">
-                            <span style="width: 40%; text-align: left;">Name:</span>
-                            <span style="width: 60%; text-align: left; margin-left: 10px;">${user?.Name}</span>
-                        </div>
-                        ${user?.UserType === "Student" ? `
-                            <div style="width: 60%; margin: auto; margin-top: 4px; display: flex; align-items: center; justify-content: between; font-size: 10px;">
-                                <span style="width: 40%; text-align: left;">Class:</span>
-                                <span style="width: 60%; text-align: left; margin-left: 10px;">${user?.Class} (${user?.Section})</span>
-                            </div>
-                        ` : `
-                            <p style="text-align: center; font-weight: bold; padding: 6px; font-size: 10px; background-color: #8fdfeb;">(${user?.UserType})</p>
-                        `}
-                        <div style="width: 60%; margin: auto; margin-top: 4px; display: flex; align-items: center; justify-content: between; font-size: 10px;">
-                            <span style="width: 40%; text-align: left;">ID No.:</span>
-                            <span style="width: 60%; text-align: left; margin-left: 10px;">${user?.id}</span>
-                        </div>
-                        <div style="width: 60%; margin: auto; margin-top: 4px; display: flex; align-items: center; justify-content: between; font-size: 10px;">
-                            <span style="width: 40%; text-align: left;">Phone:</span>
-                            <span style="width: 60%; text-align: left; margin-left: 10px;">${user?.Phone}</span>
-                        </div>
-                        <div style="width: 60%; margin: auto; margin-top: 4px; display: flex; align-items: start; justify-content: between; font-size: 10px;">
-                            <span style="width: 40%; text-align: left;">Address:</span>
-                            <span style="width: 60%; text-align: left; margin-left: 10px;">${user?.Address}</span>
-                        </div>
-                    </div>
-                    <p style="width: 35%; margin-left: auto; margin-top: 36.5px; margin-bottom: 0; padding-bottom: 0; text-align: right; font-size: 8px; border-top: 1px solid #000000; margin-right: 2px">Authority's Signature</p>
-                    <div style="margin-top: 2px; padding-top: 0; height: 12px; background: linear-gradient(to right, rgb(3 105 161), #00bfff, #8fdfeb); border-radius: 0 0 12px 12px;"></div>
             </div>
-        `;
+            <div style="margin-top: 60px">
+                <div style="width: 60%; margin: auto; margin-top: 6px; height: 4px; background: linear-gradient(to right, rgb(3 105 161), #00bfff, #8fdfeb)"></div>
+                <div style="width: 60%; margin: auto; margin-top: 6px; display: flex; align-items: center; justify-content: space-between; font-size: 10px;">
+                    <span style="width: 40%; text-align: left;">Name:</span>
+                    <span style="width: 60%; text-align: left; margin-left: 10px;">${user?.Name}</span>
+                </div>
+                ${user?.UserType === "Student" ? `
+                    <div style="width: 60%; margin: auto; margin-top: 4px; display: flex; align-items: center; justify-content: space-between; font-size: 10px;">
+                        <span style="width: 40%; text-align: left;">Class:</span>
+                        <span style="width: 60%; text-align: left; margin-left: 10px;">${user?.Class} (${user?.Section})</span>
+                    </div>
+                ` : `
+                    <p style="text-align: center; font-weight: bold; padding: 2px; font-size: 10px; background-color: #8fdfeb;">(${user?.UserType})</p>
+                `}
+                <div style="width: 60%; margin: auto; margin-top: 4px; display: flex; align-items: center; justify-content: space-between; font-size: 10px;">
+                    <span style="width: 40%; text-align: left;">ID No.:</span>
+                    <span style="width: 60%; text-align: left; margin-left: 10px;">${user?.id}</span>
+                </div>
+                <div style="width: 60%; margin: auto; margin-top: 4px; display: flex; align-items: center; justify-content: space-between; font-size: 10px;">
+                    <span style="width: 40%; text-align: left;">Phone:</span>
+                    <span style="width: 60%; text-align: left; margin-left: 10px;">${user?.Phone}</span>
+                </div>
+                <div style="width: 60%; margin: auto; margin-top: 4px; display: flex; align-items: start; justify-content: space-between; font-size: 10px;">
+                    <span style="width: 40%; text-align: left;">Address:</span>
+                    <span style="width: 60%; text-align: left; margin-left: 10px;">${user?.Address}</span>
+                </div>
+            </div>
+            <p style="width: 35%; margin-left: auto; margin-bottom: 0; padding-bottom: 0; text-align: right; font-size: 8px; border-top: 1px solid #000000; margin-right: 2px; margin-top: ${user?.UserType === "Student" ? '36.5px' : '21px'};">
+                Authority's Signature
+            </p>
+            <div style="margin-top: 2px; padding-top: 0; height: 12px; background: linear-gradient(to right, rgb(3 105 161), #00bfff, #8fdfeb); border-radius: 0 0 12px 12px;"></div>
+        </div>
+    `;
+
+        const backID = `
+        <div style="font-family: Arial, sans-serif; height: 340px; width: 213px; margin: auto; margin-top: 40vh; border-radius: 12px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);">
+            <h1 style="text-align: center; border-radius: 12px 12px 0 0; font-size: 16px; color: #00bfff; background-color: white; font-weight: bold; padding: 24px 0;">Hera Islamic Academy</h1>
+            <p style="font-size: 12px; margin: 0 24px; text-align: justify;">Location: Beside Jan Muhammad Mosque, Arakan Housing Society, Badurtola, Shulokbahar, Bahaddarhat, Chattogram.</p>
+            <p style="font-size: 12px; margin: 0 24px; text-align: left;">Contact: <a href='tel:01xxxxxxxxx'>01xxxxxxxxx</a></p>
+
+            <div style="margin-top: 10.5rem; padding-top: 0; height: 12px; background: linear-gradient(to right, rgb(3 105 161), #00bfff, #8fdfeb); border-radius: 0 0 12px 12px;"></div>
+        </div>
+    `;
+
     
         printWindow.document.write(`
             <html>
@@ -76,7 +89,9 @@ const UserIdCard = ({ user }) => {
                     </style>
                 </head>
                 <body>
-                    <div>${content}</div>
+                    <div>${frontID}</div>
+                        <div style="page-break-before: always;"></div> <!-- Break between front and back -->
+                    <div>${backID}</div>
                 </body>
             </html>
         `);
