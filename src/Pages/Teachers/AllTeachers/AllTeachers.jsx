@@ -1,10 +1,21 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import AllTeachersData from './AllTeachersData';
+import ReusableTable from '../../../Components/SharedComponents/ReusableTable';
 
 const AllTeachers = () => {
     const [teachers, setTeachers] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
+    const [tableLoading, setTableLoading] = useState(true);
+
+    //---------------------- Table Loader ---------------------//
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            setTableLoading(false);
+        }, 1000);
+
+        return () => clearTimeout(timer);
+    }, []);
 
     useEffect(() => {
         fetch('/Teachers/Teachers.json')
@@ -22,57 +33,20 @@ const AllTeachers = () => {
             setLoading(false)
         })
     }, []);
+    const stuTableHeader = ["Roll", "Photo", "Name", "Gender", "Class", "Section", "Parent", "Address", "Date of Birth", "Phone", "Email"]
+
+    const renderStudentRow = (teacher) => (
+        <AllTeachersData key={teacher.roll} teacher={teacher} />
+    );
     return (
-        <div className='bg-white rounded-md p-4'>
-            <h3 className='py-4 font-bold text-xl'>All Teachers Data</h3>
-            <div className='overflow-auto'>
-            <table className="border border-gray-200  overflow-auto border-l-0 p-2 w-[100%]">
-                <thead className=''>
-                    <tr className=''>
-                        <th className='pr-2 py-2 text-nowrap'>ID</th>
-                        <th className='p-2 text-left text-nowrap'>Photo</th>
-                        <th className='p-2 text-left text-nowrap'>Name</th>
-                        <th className='p-2 text-left text-nowrap'>Gender</th>
-                        <th className='p-2 text-left text-nowrap'>Subject</th>
-                        <th className='p-2 text-left text-nowrap'>Class</th>
-                        <th className='p-2 text-left text-nowrap'>Section</th>
-                        <th className='p-2 text-left text-nowrap'>Parent</th>
-                        <th className='p-2 text-left text-nowrap'>Address</th>
-                        <th className='p-2 text-left text-nowrap'>Joining Date</th>
-                        <th className='p-2 text-left text-nowrap'>Phone</th>
-                        <th className='pl-2 py-2 text-left text-nowrap'>Email</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {
-                        teachers.map(teacher =>
-                            <tr key={teacher?.ID} className='border-y border-gray-200 odd:bg-gray-50 even:bg-white hover:odd:bg-gray-100'>
-                                <td className='pr-2 py-2 text-nowrap'>{teacher?.ID}</td>
-                                <td className='p-2 text-nowrap'>
-                                <Link to={`teachers/${teacher?.ID}`} className='cursor-pointer'>
-                                <img src={teacher?.TeacherImage} alt="" className='h-8 w-8 rounded-full' />
-                                </Link>
-                                </td>
-                                <td className='p-2 text-nowrap'>
-                                <Link to={`teachers/${teacher?.ID}`} className='cursor-pointer'>
-                                    {teacher?.Name}
-                                </Link>
-                                </td>
-                                <td className='p-2 text-nowrap'>{teacher?.Gender}</td>
-                                <td className='p-2 text-nowrap'>{teacher?.Subject}</td>
-                                <td className='p-2 text-nowrap'>{teacher?.Class}</td>
-                                <td className='p-2 text-nowrap'>{teacher?.Section}</td>
-                                <td className='p-2 text-nowrap'>{teacher?.ParentName}</td>
-                                <td className='p-2 text-nowrap'>{teacher?.Address}</td>
-                                <td className='p-2 text-nowrap'>{teacher?.AdmissionDate}</td>
-                                <td className='p-2 text-nowrap'>{teacher?.Phone}</td>
-                                <td className='pl-2 py-2 text-nowrap'>{teacher?.Email}</td>
-                            </tr>
-                        )
-                    }
-                </tbody>
-            </table>
-            </div>
+        <div className='bg-white rounded-md p-4 h-[96vh]'>
+            <ReusableTable
+                title={"All Students"}
+                headers={stuTableHeader}
+                data={teachers}
+                tableLoading={tableLoading}
+                renderRow={renderStudentRow}
+            />
         </div>
     );
 };
