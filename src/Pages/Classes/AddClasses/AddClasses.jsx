@@ -83,7 +83,7 @@ const AddClasses = () => {
                         </div>
                         <div className='w-full'>
                         <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-first-name">
-                            Class <span className='text-red-500'>*</span>
+                            Section <span className='text-red-500'>*</span>
                         </label>
                         <select
                         {...register("section", { required: true })}

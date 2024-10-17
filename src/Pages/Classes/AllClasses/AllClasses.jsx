@@ -1,50 +1,54 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import ReusableTable from '../../../Components/SharedComponents/ReusableTable';
+import AllClassesData from './AllClassesData';
 
 const AllClasses = () => {
+    const [classes, setClasses] = useState([]);
+    const [laoding, setLoading] = useState(false);
+    const [error, setError] = useState(null);
+    const [tableLoading, setTableLoading] = useState(true);
+
+    //---------------------- Table Loader ---------------------//
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            setTableLoading(false);
+        }, 1000);
+
+        return () => clearTimeout(timer);
+    }, []);
+
+    useEffect(() => {
+        fetch('/Classes/Classes.json')
+        .then(res => {
+            if(!res.ok){
+                throw new Error('Network response was not ok');
+            }
+            return res.json();
+        })
+        .then(data => {
+            setClasses(data);
+            setLoading(false);
+        }).catch(err => {
+            setError(err.messages);
+            setLoading(false)
+        })
+    }, []);
+    const paymentTableHeader = ["ID", "Photo", "Name", "Gender", "Subject", "Class", "Section", "Date", "Time", "Phone", "Email"];
+
+
+    const renderStudentRow = (singleClass) => (
+        <AllClassesData key={singleClass.ID} singleClass={singleClass} />
+    );
     return (
-        <div className='bg-white rounded-md p-4'>
-            <h3 className='py-4 font-bold text-xl'>All Classes Schedules</h3>
-            <div className='overflow-auto'>
-            <table className="border border-gray-200  overflow-auto border-l-0 p-2 w-[100%]">
-                <thead className=''>
-                    <tr className=''>
-                        <th className='pr-2 py-2 text-nowrap'>ID</th>
-                        <th className='p-2 text-nowrap'>Photo</th>
-                        <th className='p-2 text-nowrap'>Name</th>
-                        <th className='p-2 text-nowrap'>Gender</th>
-                        <th className='p-2 text-nowrap'>Class</th>
-                        <th className='p-2 text-nowrap'>Section</th>
-                        <th className='p-2 text-nowrap'>Date</th>
-                        <th className='p-2 text-nowrap'>Time</th>
-                        <th className='p-2 text-nowrap'>Phone</th>
-                        <th className='pl-2 py-2 text-nowrap'>Email</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr className='border-y border-gray-200 odd:bg-gray-50 even:bg-white hover:odd:bg-gray-100'>
-                        <td className='pr-2 py-2 text-nowrap'>01</td>
-                        <td className='p-2 text-nowrap'>
-                        <Link to="/stu" className='flex items-center gap-2'>
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJOXzncoFn4YCPE7za6ghwJdj-IWqbbTXGtg&s" alt="" className='h-8 w-8 rounded-full' />
-                        </Link>
-                        </td>
-                        <td className='p-2 text-nowrap'>
-                        <Link to="/teacher" className='flex items-center gap-2'>
-                            Mrs. Y
-                        </Link>
-                        </td>
-                        <td className='p-2 text-nowrap'>Female</td>
-                        <td className='p-2 text-nowrap'>14</td>
-                        <td className='p-2 text-nowrap'>A</td>
-                        <td className='p-2 text-nowrap'>19/09/2024</td>
-                        <td className='p-2 text-nowrap'>10.00 - 11.00</td>
-                        <td className='p-2 text-nowrap'>018XXXXXXXXX</td>
-                        <td className='pl-2 py-2 text-nowrap'>xyz@gmail.com</td>
-                    </tr>
-                </tbody>
-            </table>
-            </div>
+        <div className='bg-white rounded-md p-4 h-[96vh] overflow-auto'>
+            <ReusableTable
+                title={"All Class Schedules"}
+                headers={paymentTableHeader}
+                data={classes}
+                tableLoading={tableLoading}
+                renderRow={renderStudentRow}
+            />
         </div>
     );
 };

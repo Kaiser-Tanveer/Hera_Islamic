@@ -1,0 +1,482 @@
+[
+    {
+        "StudentID": 1,
+        "StudentName": "Alice Johnson",
+        "Class": 1,
+        "Section": "A",
+        "Date": "2024-10-01",
+        "AttendanceStatus": "Present"
+    },
+    {
+        "StudentID": 1,
+        "StudentName": "Alice Johnson",
+        "Class": 1,
+        "Section": "A",
+        "Date": "2024-10-02",
+        "AttendanceStatus": "Absent"
+    },
+    {
+        "StudentID": 1,
+        "StudentName": "Alice Johnson",
+        "Class": 1,
+        "Section": "A",
+        "Date": "2024-10-03",
+        "AttendanceStatus": "Present"
+    },
+    {
+        "StudentID": 1,
+        "StudentName": "Alice Johnson",
+        "Class": 1,
+        "Section": "A",
+        "Date": "2024-10-04",
+        "AttendanceStatus": "Present"
+    },
+    {
+        "StudentID": 1,
+        "StudentName": "Alice Johnson",
+        "Class": 1,
+        "Section": "A",
+        "Date": "2024-10-05",
+        "AttendanceStatus": "Present"
+    },
+    {
+        "StudentID": 2,
+        "StudentName": "Bob Smith",
+        "Class": 1,
+        "Section": "A",
+        "Date": "2024-10-01",
+        "AttendanceStatus": "Absent"
+    },
+    {
+        "StudentID": 2,
+        "StudentName": "Bob Smith",
+        "Class": 1,
+        "Section": "A",
+        "Date": "2024-10-02",
+        "AttendanceStatus": "Present"
+    },
+    {
+        "StudentID": 2,
+        "StudentName": "Bob Smith",
+        "Class": 1,
+        "Section": "A",
+        "Date": "2024-10-03",
+        "AttendanceStatus": "Present"
+    },
+    {
+        "StudentID": 2,
+        "StudentName": "Bob Smith",
+        "Class": 1,
+        "Section": "A",
+        "Date": "2024-10-04",
+        "AttendanceStatus": "Present"
+    },
+    {
+        "StudentID": 2,
+        "StudentName": "Bob Smith",
+        "Class": 1,
+        "Section": "A",
+        "Date": "2024-10-05",
+        "AttendanceStatus": "Present"
+    },
+    {
+        "StudentID": 3,
+        "StudentName": "Charlie Brown",
+        "Class": 1,
+        "Section": "A",
+        "Date": "2024-10-01",
+        "AttendanceStatus": "Present"
+    },
+    {
+        "StudentID": 3,
+        "StudentName": "Charlie Brown",
+        "Class": 1,
+        "Section": "A",
+        "Date": "2024-10-02",
+        "AttendanceStatus": "Present"
+    },
+    {
+        "StudentID": 3,
+        "StudentName": "Charlie Brown",
+        "Class": 1,
+        "Section": "A",
+        "Date": "2024-10-03",
+        "AttendanceStatus": "Absent"
+    },
+    {
+        "StudentID": 3,
+        "StudentName": "Charlie Brown",
+        "Class": 1,
+        "Section": "A",
+        "Date": "2024-10-04",
+        "AttendanceStatus": "Present"
+    },
+    {
+        "StudentID": 3,
+        "StudentName": "Charlie Brown",
+        "Class": 1,
+        "Section": "A",
+        "Date": "2024-10-05",
+        "AttendanceStatus": "Present"
+    },
+    {
+        "StudentID": 4,
+        "StudentName": "Diana Prince",
+        "Class": 1,
+        "Section": "A",
+        "Date": "2024-10-01",
+        "AttendanceStatus": "Present"
+    },
+    {
+        "StudentID": 4,
+        "StudentName": "Diana Prince",
+        "Class": 1,
+        "Section": "A",
+        "Date": "2024-10-02",
+        "AttendanceStatus": "Present"
+    },
+    {
+        "StudentID": 4,
+        "StudentName": "Diana Prince",
+        "Class": 1,
+        "Section": "A",
+        "Date": "2024-10-03",
+        "AttendanceStatus": "Present"
+    },
+    {
+        "StudentID": 4,
+        "StudentName": "Diana Prince",
+        "Class": 1,
+        "Section": "A",
+        "Date": "2024-10-04",
+        "AttendanceStatus": "Absent"
+    },
+    {
+        "StudentID": 4,
+        "StudentName": "Diana Prince",
+        "Class": 1,
+        "Section": "A",
+        "Date": "2024-10-05",
+        "AttendanceStatus": "Present"
+    },
+    {
+        "StudentID": 5,
+        "StudentName": "Ethan Hunt",
+        "Class": 1,
+        "Section": "A",
+        "Date": "2024-10-01",
+        "AttendanceStatus": "Absent"
+    },
+    {
+        "StudentID": 5,
+        "StudentName": "Ethan Hunt",
+        "Class": 1,
+        "Section": "A",
+        "Date": "2024-10-02",
+        "AttendanceStatus": "Present"
+    },
+    {
+        "StudentID": 5,
+        "StudentName": "Ethan Hunt",
+        "Class": 1,
+        "Section": "A",
+        "Date": "2024-10-03",
+        "AttendanceStatus": "Present"
+    },
+    {
+        "StudentID": 5,
+        "StudentName": "Ethan Hunt",
+        "Class": 1,
+        "Section": "A",
+        "Date": "2024-10-04",
+        "AttendanceStatus": "Present"
+    },
+    {
+        "StudentID": 5,
+        "StudentName": "Ethan Hunt",
+        "Class": 1,
+        "Section": "A",
+        "Date": "2024-10-05",
+        "AttendanceStatus": "Absent"
+    },
+    {
+        "StudentID": 6,
+        "StudentName": "Fiona Green",
+        "Class": 1,
+        "Section": "A",
+        "Date": "2024-10-01",
+        "AttendanceStatus": "Present"
+    },
+    {
+        "StudentID": 6,
+        "StudentName": "Fiona Green",
+        "Class": 1,
+        "Section": "A",
+        "Date": "2024-10-02",
+        "AttendanceStatus": "Present"
+    },
+    {
+        "StudentID": 6,
+        "StudentName": "Fiona Green",
+        "Class": 1,
+        "Section": "A",
+        "Date": "2024-10-03",
+        "AttendanceStatus": "Present"
+    },
+    {
+        "StudentID": 6,
+        "StudentName": "Fiona Green",
+        "Class": 1,
+        "Section": "A",
+        "Date": "2024-10-04",
+        "AttendanceStatus": "Absent"
+    },
+    {
+        "StudentID": 6,
+        "StudentName": "Fiona Green",
+        "Class": 1,
+        "Section": "A",
+        "Date": "2024-10-05",
+        "AttendanceStatus": "Present"
+    },
+    {
+        "StudentID": 7,
+        "StudentName": "George White",
+        "Class": 1,
+        "Section": "A",
+        "Date": "2024-10-01",
+        "AttendanceStatus": "Present"
+    },
+    {
+        "StudentID": 7,
+        "StudentName": "George White",
+        "Class": 1,
+        "Section": "A",
+        "Date": "2024-10-02",
+        "AttendanceStatus": "Present"
+    },
+    {
+        "StudentID": 7,
+        "StudentName": "George White",
+        "Class": 1,
+        "Section": "A",
+        "Date": "2024-10-03",
+        "AttendanceStatus": "Absent"
+    },
+    {
+        "StudentID": 7,
+        "StudentName": "George White",
+        "Class": 1,
+        "Section": "A",
+        "Date": "2024-10-04",
+        "AttendanceStatus": "Present"
+    },
+    {
+        "StudentID": 7,
+        "StudentName": "George White",
+        "Class": 1,
+        "Section": "A",
+        "Date": "2024-10-05",
+        "AttendanceStatus": "Present"
+    },
+    {
+        "StudentID": 8,
+        "StudentName": "Hannah Black",
+        "Class": 1,
+        "Section": "A",
+        "Date": "2024-10-01",
+        "AttendanceStatus": "Present"
+    },
+    {
+        "StudentID": 8,
+        "StudentName": "Hannah Black",
+        "Class": 1,
+        "Section": "A",
+        "Date": "2024-10-02",
+        "AttendanceStatus": "Absent"
+    },
+    {
+        "StudentID": 8,
+        "StudentName": "Hannah Black",
+        "Class": 1,
+        "Section": "A",
+        "Date": "2024-10-03",
+        "AttendanceStatus": "Present"
+    },
+    {
+        "StudentID": 8,
+        "StudentName": "Hannah Black",
+        "Class": 1,
+        "Section": "A",
+        "Date": "2024-10-04",
+        "AttendanceStatus": "Present"
+    },
+    {
+        "StudentID": 8,
+        "StudentName": "Hannah Black",
+        "Class": 1,
+        "Section": "A",
+        "Date": "2024-10-05",
+        "AttendanceStatus": "Present"
+    },
+    {
+        "StudentID": 9,
+        "StudentName": "Ian Grey",
+        "Class": 1,
+        "Section": "A",
+        "Date": "2024-10-01",
+        "AttendanceStatus": "Absent"
+    },
+    {
+        "StudentID": 9,
+        "StudentName": "Ian Grey",
+        "Class": 1,
+        "Section": "A",
+        "Date": "2024-10-02",
+        "AttendanceStatus": "Present"
+    },
+    {
+        "StudentID": 9,
+        "StudentName": "Ian Grey",
+        "Class": 1,
+        "Section": "A",
+        "Date": "2024-10-03",
+        "AttendanceStatus": "Present"
+    },
+    {
+        "StudentID": 9,
+        "StudentName": "Ian Grey",
+        "Class": 1,
+        "Section": "A",
+        "Date": "2024-10-04",
+        "AttendanceStatus": "Present"
+    },
+    {
+        "StudentID": 9,
+        "StudentName": "Ian Grey",
+        "Class": 1,
+        "Section": "A",
+        "Date": "2024-10-05",
+        "AttendanceStatus": "Absent"
+    },
+    {
+        "StudentID": 10,
+        "StudentName": "Jenna Orange",
+        "Class": 1,
+        "Section": "A",
+        "Date": "2024-10-01",
+        "AttendanceStatus": "Present"
+    },
+    {
+        "StudentID": 10,
+        "StudentName": "Jenna Orange",
+        "Class": 1,
+        "Section": "A",
+        "Date": "2024-10-02",
+        "AttendanceStatus": "Present"
+    },
+    {
+        "StudentID": 10,
+        "StudentName": "Jenna Orange",
+        "Class": 1,
+        "Section": "A",
+        "Date": "2024-10-03",
+        "AttendanceStatus": "Present"
+    },
+    {
+        "StudentID": 10,
+        "StudentName": "Jenna Orange",
+        "Class": 1,
+        "Section": "A",
+        "Date": "2024-10-04",
+        "AttendanceStatus": "Absent"
+    },
+    {
+        "StudentID": 10,
+        "StudentName": "Jenna Orange",
+        "Class": 1,
+        "Section": "A",
+        "Date": "2024-10-05",
+        "AttendanceStatus": "Present"
+    },
+    {
+        "StudentID": 11,
+        "StudentName": "Kyle Blue",
+        "Class": 1,
+        "Section": "A",
+        "Date": "2024-10-01",
+        "AttendanceStatus": "Present"
+    },
+    {
+        "StudentID": 11,
+        "StudentName": "Kyle Blue",
+        "Class": 1,
+        "Section": "A",
+        "Date": "2024-10-02",
+        "AttendanceStatus": "Absent"
+    },
+    {
+        "StudentID": 11,
+        "StudentName": "Kyle Blue",
+        "Class": 1,
+        "Section": "A",
+        "Date": "2024-10-03",
+        "AttendanceStatus": "Present"
+    },
+    {
+        "StudentID": 11,
+        "StudentName": "Kyle Blue",
+        "Class": 1,
+        "Section": "A",
+        "Date": "2024-10-04",
+        "AttendanceStatus": "Present"
+    },
+    {
+        "StudentID": 11,
+        "StudentName": "Kyle Blue",
+        "Class": 1,
+        "Section": "A",
+        "Date": "2024-10-05",
+        "AttendanceStatus": "Present"
+    },
+    {
+        "StudentID": 12,
+        "StudentName": "Liam Red",
+        "Class": 1,
+        "Section": "A",
+        "Date": "2024-10-01",
+        "AttendanceStatus": "Present"
+    },
+    {
+        "StudentID": 12,
+        "StudentName": "Liam Red",
+        "Class": 1,
+        "Section": "A",
+        "Date": "2024-10-02",
+        "AttendanceStatus": "Present"
+    },
+    {
+        "StudentID": 12,
+        "StudentName": "Liam Red",
+        "Class": 1,
+        "Section": "A",
+        "Date": "2024-10-03",
+        "AttendanceStatus": "Present"
+    },
+    {
+        "StudentID": 12,
+        "StudentName": "Liam Red",
+        "Class": 1,
+        "Section": "A",
+        "Date": "2024-10-04",
+        "AttendanceStatus": "Absent"
+    },
+    {
+        "StudentID": 12,
+        "StudentName": "Liam Red",
+        "Class": 1,
+        "Section": "A",
+        "Date": "2024-10-05",
+        "AttendanceStatus": "Present"
+    }
+]

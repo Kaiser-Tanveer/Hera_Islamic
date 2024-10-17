@@ -1,0 +1,82 @@
+[
+    {
+        "SL": 1,
+        "SubjectName": "Mathematics",
+        "SubjectCode": "MATH101",
+        "SubjectType": "Core",
+        "Class": "10",
+        "Date": "2024-10-16"
+    },
+    {
+        "SL": 2,
+        "SubjectName": "English",
+        "SubjectCode": "ENG102",
+        "SubjectType": "Core",
+        "Class": "10",
+        "Date": "2024-10-16"
+    },
+    {
+        "SL": 3,
+        "SubjectName": "Biology",
+        "SubjectCode": "BIO103",
+        "SubjectType": "Elective",
+        "Class": "10",
+        "Date": "2024-10-16"
+    },
+    {
+        "SL": 4,
+        "SubjectName": "Physics",
+        "SubjectCode": "PHY104",
+        "SubjectType": "Core",
+        "Class": "10",
+        "Date": "2024-10-16"
+    },
+    {
+        "SL": 5,
+        "SubjectName": "Chemistry",
+        "SubjectCode": "CHE105",
+        "SubjectType": "Core",
+        "Class": "10",
+        "Date": "2024-10-16"
+    },
+    {
+        "SL": 6,
+        "SubjectName": "History",
+        "SubjectCode": "HIST106",
+        "SubjectType": "Elective",
+        "Class": "10",
+        "Date": "2024-10-16"
+    },
+    {
+        "SL": 7,
+        "SubjectName": "Geography",
+        "SubjectCode": "GEO107",
+        "SubjectType": "Elective",
+        "Class": "10",
+        "Date": "2024-10-16"
+    },
+    {
+        "SL": 8,
+        "SubjectName": "Computer Science",
+        "SubjectCode": "CS108",
+        "SubjectType": "Core",
+        "Class": "10",
+        "Date": "2024-10-16"
+    },
+    {
+        "SL": 9,
+        "SubjectName": "Physical Education",
+        "SubjectCode": "PE109",
+        "SubjectType": "Core",
+        "Class": "10",
+        "Date": "2024-10-16"
+    },
+    {
+        "SL": 10,
+        "SubjectName": "Art",
+        "SubjectCode": "ART110",
+        "SubjectType": "Elective",
+        "Class": "10",
+        "Date": "2024-10-16"
+    }
+]

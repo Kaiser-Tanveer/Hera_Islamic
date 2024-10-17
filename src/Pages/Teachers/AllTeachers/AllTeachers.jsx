@@ -33,7 +33,7 @@ const AllTeachers = () => {
             setLoading(false)
         })
     }, []);
-    const stuTableHeader = ["Roll", "Photo", "Name", "Gender", "Class", "Section", "Parent", "Address", "Date of Birth", "Phone", "Email"]
+    const stuTableHeader = ["ID", "Photo", "Name", "Gender", "Class", "Section", "Parent", "Address", "Date of Birth", "Phone", "Email"]
 
     const renderStudentRow = (teacher) => (
         <AllTeachersData key={teacher.roll} teacher={teacher} />
@@ -41,7 +41,7 @@ const AllTeachers = () => {
     return (
         <div className='bg-white rounded-md p-4 h-[96vh]'>
             <ReusableTable
-                title={"All Students"}
+                title={"All Teachers"}
                 headers={stuTableHeader}
                 data={teachers}
                 tableLoading={tableLoading}

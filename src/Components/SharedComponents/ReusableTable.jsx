@@ -2,6 +2,7 @@ import React from 'react';
 import TableLoader from '../../Shared/Loaders/TableLoader';
 
 const ReusableTable = ({ title, headers, data, tableLoading, renderRow }) => {
+
     return (
         <>
             <h3 className='py-4 font-bold text-xl'>{title}</h3>

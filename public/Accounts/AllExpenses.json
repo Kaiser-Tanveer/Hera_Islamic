@@ -1,0 +1,102 @@
+[
+    {
+        "ID": 1,
+        "Name": "Office Supplies",
+        "ExpenseType": "Supplies",
+        "Amount": 150.00,
+        "Status": "Paid",
+        "Phone": "123-456-7890",
+        "Email": "office@example.com",
+        "Date": "2023-10-01"
+    },
+    {
+        "ID": 2,
+        "Name": "Utilities",
+        "ExpenseType": "Bills",
+        "Amount": 200.50,
+        "Status": "Pending",
+        "Phone": "234-567-8901",
+        "Email": "utilities@example.com",
+        "Date": "2023-10-02"
+    },
+    {
+        "ID": 3,
+        "Name": "Travel Expenses",
+        "ExpenseType": "Travel",
+        "Amount": 500.00,
+        "Status": "Paid",
+        "Phone": "345-678-9012",
+        "Email": "travel@example.com",
+        "Date": "2023-10-03"
+    },
+    {
+        "ID": 4,
+        "Name": "Software Subscription",
+        "ExpenseType": "Software",
+        "Amount": 120.00,
+        "Status": "Paid",
+        "Phone": "456-789-0123",
+        "Email": "software@example.com",
+        "Date": "2023-10-04"
+    },
+    {
+        "ID": 5,
+        "Name": "Maintenance Fees",
+        "ExpenseType": "Maintenance",
+        "Amount": 300.00,
+        "Status": "Overdue",
+        "Phone": "567-890-1234",
+        "Email": "maintenance@example.com",
+        "Date": "2023-10-05"
+    },
+    {
+        "ID": 6,
+        "Name": "Marketing Expenses",
+        "ExpenseType": "Marketing",
+        "Amount": 750.00,
+        "Status": "Pending",
+        "Phone": "678-901-2345",
+        "Email": "marketing@example.com",
+        "Date": "2023-10-06"
+    },
+    {
+        "ID": 7,
+        "Name": "Employee Salaries",
+        "ExpenseType": "Salaries",
+        "Amount": 4500.00,
+        "Status": "Paid",
+        "Phone": "789-012-3456",
+        "Email": "hr@example.com",
+        "Date": "2023-10-07"
+    },
+    {
+        "ID": 8,
+        "Name": "Event Sponsorship",
+        "ExpenseType": "Sponsorship",
+        "Amount": 3000.00,
+        "Status": "Paid",
+        "Phone": "890-123-4567",
+        "Email": "events@example.com",
+        "Date": "2023-10-08"
+    },
+    {
+        "ID": 9,
+        "Name": "Office Rent",
+        "ExpenseType": "Rent",
+        "Amount": 2000.00,
+        "Status": "Pending",
+        "Phone": "901-234-5678",
+        "Email": "rent@example.com",
+        "Date": "2023-10-09"
+    },
+    {
+        "ID": 10,
+        "Name": "Insurance Premium",
+        "ExpenseType": "Insurance",
+        "Amount": 800.00,
+        "Status": "Paid",
+        "Phone": "012-345-6789",
+        "Email": "insurance@example.com",
+        "Date": "2023-10-10"
+    }
+]

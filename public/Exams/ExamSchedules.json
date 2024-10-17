@@ -5,7 +5,8 @@
         "Subject": "Mathematics",
         "Class": "5",
         "Section": "A",
-        "Time": "09:00 AM",
+        "StartTime": "09:00 AM",
+        "EndTime": "10:00 AM",
         "Date": "2024-11-01"
     },
     {
@@ -14,7 +15,8 @@
         "Subject": "Science",
         "Class": "5",
         "Section": "A",
-        "Time": "11:00 AM",
+        "StartTime": "11:00 AM",
+        "EndTime": "12:00 PM",
         "Date": "2024-11-03"
     },
     {
@@ -23,7 +25,8 @@
         "Subject": "English",
         "Class": "5",
         "Section": "B",
-        "Time": "01:00 PM",
+        "StartTime": "01:00 PM",
+        "EndTime": "02:00 PM",
         "Date": "2024-11-05"
     },
     {
@@ -32,7 +35,8 @@
         "Subject": "History",
         "Class": "5",
         "Section": "B",
-        "Time": "10:00 AM",
+        "StartTime": "10:00 AM",
+        "EndTime": "11:00 AM",
         "Date": "2024-11-07"
     },
     {
@@ -41,7 +45,8 @@
         "Subject": "Geography",
         "Class": "5",
         "Section": "A",
-        "Time": "02:00 PM",
+        "StartTime": "02:00 PM",
+        "EndTime": "03:00 PM",
         "Date": "2024-11-09"
     },
     {
@@ -50,7 +55,8 @@
         "Subject": "Art",
         "Class": "5",
         "Section": "A",
-        "Time": "10:30 AM",
+        "StartTime": "10:30 AM",
+        "EndTime": "11:30 AM",
         "Date": "2024-11-11"
     },
     {
@@ -59,7 +65,8 @@
         "Subject": "Physical Education",
         "Class": "5",
         "Section": "B",
-        "Time": "01:30 PM",
+        "StartTime": "01:30 PM",
+        "EndTime": "02:30 PM",
         "Date": "2024-11-13"
     }
 ]

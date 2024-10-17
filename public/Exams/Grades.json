@@ -1,6 +1,8 @@
 [
     {
         "id": "01",
+        "StudentName": "Alice Johnson",
+        "Class": "1A",
         "Grade": "A+",
         "Point": 4.0,
         "PercentageFrom": 90,
@@ -9,6 +11,8 @@
     },
     {
         "id": "02",
+        "StudentName": "Bob Smith",
+        "Class": "1A",
         "Grade": "A",
         "Point": 3.7,
         "PercentageFrom": 80,
@@ -17,6 +21,8 @@
     },
     {
         "id": "03",
+        "StudentName": "Charlie Brown",
+        "Class": "1A",
         "Grade": "B+",
         "Point": 3.3,
         "PercentageFrom": 75,
@@ -25,6 +31,8 @@
     },
     {
         "id": "04",
+        "StudentName": "David Wilson",
+        "Class": "1A",
         "Grade": "B",
         "Point": 3.0,
         "PercentageFrom": 70,
@@ -33,6 +41,8 @@
     },
     {
         "id": "05",
+        "StudentName": "Eva Green",
+        "Class": "1A",
         "Grade": "C+",
         "Point": 2.7,
         "PercentageFrom": 65,
@@ -41,6 +51,8 @@
     },
     {
         "id": "06",
+        "StudentName": "Frank Thomas",
+        "Class": "1A",
         "Grade": "C",
         "Point": 2.0,
         "PercentageFrom": 60,
@@ -49,6 +61,8 @@
     },
     {
         "id": "07",
+        "StudentName": "Grace Lee",
+        "Class": "1A",
         "Grade": "F",
         "Point": 0.0,
         "PercentageFrom": 0,
