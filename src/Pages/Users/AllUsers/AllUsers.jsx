@@ -5,7 +5,7 @@ const AllUsers = ({users}) => {
     const [categories, setCategories] = useState([]);
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(null);
-    const [status, setStatus] = useState('');
+    const [status, setStatus] = useState('All Users');
     const [description, setDescription] = useState('');
     const [filteredUsers, setFilteredUsers] = useState([]);
 
@@ -56,7 +56,7 @@ const AllUsers = ({users}) => {
                 </aside>
                 <div className='w-[65%]'>
                     <h2 className='text-xl text-center font-bold'>{status}</h2>
-                    <p className='opacity-50 text-center pb-6'>{description}</p>
+                    <p className='opacity-50 text-center'>{description}</p>
                     <FilteredUser 
                         filteredUsers={filteredUsers}
                         users={users}
