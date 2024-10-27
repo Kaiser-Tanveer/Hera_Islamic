@@ -26,6 +26,7 @@ import Notice from "../Pages/Notice/Notice";
 import Users from "../Pages/Users/Users";
 import SingleUser from "../Pages/Users/AllUsers/SingleUser";
 import Layout from "../Layouts/Layout";
+import DashboardHome from "../Dashboard/DashboardHome/DashboardHome";
 
 const Router = createBrowserRouter([
     {
@@ -50,6 +51,10 @@ const Router = createBrowserRouter([
         path: '/dashboard',
         element: <DashboardLayout />,
         children: [
+            {
+                path: '/dashboard',
+        element: <DashboardHome />,
+            },
             {
                 path: '/dashboard/students',  // Removed leading slash
                 element: <AllStudents />

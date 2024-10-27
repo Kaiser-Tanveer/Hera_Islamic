@@ -11,7 +11,7 @@ const CreateNotice = () => {
     
       const onSubmit = (data) => console.log(data)
     return (
-        <div className='bg-white p-6 rounded-md rounded-e-md h-[80vh]'>
+        <div className='bg-white p-6 rounded-md rounded-e-md h-[80vh] mb-10'>
             <h2 className='pb-6 text-xl font-bold'>Create New Notice</h2>
             <div>
             <form onSubmit={handleSubmit(onSubmit)}>

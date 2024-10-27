@@ -23,7 +23,7 @@ const AllNotices = () => {
     }, []);
     
     return (
-        <div className='bg-white p-6 rounded-md rounded-e-md mt-10'>
+        <div className='bg-white p-6 rounded-md rounded-e-md'>
             <h2 className='pb-6 text-xl font-bold'>Notice Board</h2>
             {
                 notices?.map((notice, index) => (
