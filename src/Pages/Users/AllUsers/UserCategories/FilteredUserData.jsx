@@ -19,7 +19,7 @@ const FilteredUserData = ({user}) => {
                 <Link to={`/singleUser/${user.id}`} className='flex items-center gap-2'>{user.Name}</Link>
             </td>
             <td className='p-2 text-nowrap'>{user.Gender}</td>
-            <td className='p-2 text-nowrap font-bold uppercase text-sky-500'>{user.UserType}</td>
+            <td className='p-2 text-nowrap font-bold uppercase text-blue-700'>{user.UserType}</td>
             <td className='p-2 text-nowrap'>{user.Address}</td>
             <td className='p-2 text-nowrap'>{user.Phone}</td>
             <td className='pl-2 py-2 text-nowrap'>{user.Email}</td>

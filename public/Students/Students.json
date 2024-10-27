@@ -1,40 +1,40 @@
 [
     {
         "roll": 1,
-        "studentImage": "https://randomuser.me/api/portraits/women/1.jpg",
-        "name": "Alice Johnson",
+        "studentImage": "https://randomuser.me/api/portraits/women/5.jpg",
+        "name": "Aisha Khan",
         "gender": "Female",
         "class": "5",
         "section": "A",
-        "parent": "John Johnson",
+        "parent": "John Khan",
         "address": "123 Maple Street, Springfield",
         "dateOfBirth": "2013-03-15",
         "phone": "555-0123",
-        "fathersName": "John Johnson",
-        "mothersName": "Mary Johnson",
+        "fathersName": "John Khan",
+        "mothersName": "Mary Khan",
         "admissionDate": "2020-08-20",
-        "email": "alice.johnson@example.com"
+        "email": "aisha.khan@example.com"
     },
     {
         "roll": 2,
-        "studentImage": "https://randomuser.me/api/portraits/men/1.jpg",
-        "name": "Michael Smith",
+        "studentImage": "https://randomuser.me/api/portraits/men/5.jpg",
+        "name": "Bilal Ahmed",
         "gender": "Male",
         "class": "5",
         "section": "B",
-        "parent": "Sarah Smith",
+        "parent": "Sarah Ahmed",
         "address": "456 Oak Avenue, Springfield",
         "dateOfBirth": "2013-05-22",
         "phone": "555-0456",
-        "fathersName": "Robert Smith",
-        "mothersName": "Sarah Smith",
+        "fathersName": "Robert Ahmed",
+        "mothersName": "Sarah Ahmed",
         "admissionDate": "2020-08-21",
-        "email": "michael.smith@example.com"
+        "email": "bilal.ahmed@example.com"
     },
     {
         "roll": 3,
-        "studentImage": "https://randomuser.me/api/portraits/women/2.jpg",
-        "name": "Emma Brown",
+        "studentImage": "https://randomuser.me/api/portraits/women/6.jpg",
+        "name": "Fatima Brown",
         "gender": "Female",
         "class": "5",
         "section": "A",
@@ -45,12 +45,12 @@
         "fathersName": "David Brown",
         "mothersName": "Linda Brown",
         "admissionDate": "2020-08-22",
-        "email": "emma.brown@example.com"
+        "email": "fatima.brown@example.com"
     },
     {
         "roll": 4,
-        "studentImage": "https://randomuser.me/api/portraits/men/2.jpg",
-        "name": "James Davis",
+        "studentImage": "https://randomuser.me/api/portraits/men/6.jpg",
+        "name": "Omar Davis",
         "gender": "Male",
         "class": "5",
         "section": "B",
@@ -61,12 +61,12 @@
         "fathersName": "Michael Davis",
         "mothersName": "Karen Davis",
         "admissionDate": "2020-08-23",
-        "email": "james.davis@example.com"
+        "email": "omar.davis@example.com"
     },
     {
         "roll": 5,
-        "studentImage": "https://randomuser.me/api/portraits/women/3.jpg",
-        "name": "Sophia Wilson",
+        "studentImage": "https://randomuser.me/api/portraits/women/7.jpg",
+        "name": "Zainab Wilson",
         "gender": "Female",
         "class": "5",
         "section": "A",
@@ -77,11 +77,11 @@
         "fathersName": "Thomas Wilson",
         "mothersName": "Emily Wilson",
         "admissionDate": "2020-08-24",
-        "email": "sophia.wilson@example.com"
+        "email": "zainab.wilson@example.com"
     },
     {
         "roll": 6,
-        "studentImage": "https://randomuser.me/api/portraits/men/3.jpg",
+        "studentImage": "https://randomuser.me/api/portraits/men/7.jpg",
         "name": "Daniel Martinez",
         "gender": "Male",
         "class": "5",
@@ -97,8 +97,8 @@
     },
     {
         "roll": 7,
-        "studentImage": "https://randomuser.me/api/portraits/women/4.jpg",
-        "name": "Olivia Garcia",
+        "studentImage": "https://randomuser.me/api/portraits/women/8.jpg",
+        "name": "Hana Garcia",
         "gender": "Female",
         "class": "5",
         "section": "A",
@@ -109,6 +109,6 @@
         "fathersName": "Juan Garcia",
         "mothersName": "Maria Garcia",
         "admissionDate": "2020-08-26",
-        "email": "olivia.garcia@example.com"
+        "email": "hana.garcia@example.com"
     }
 ]

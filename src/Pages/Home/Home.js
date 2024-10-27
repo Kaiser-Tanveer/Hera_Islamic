@@ -1,10 +1,10 @@
 import React from 'react';
-import ClientsEarningHeaders from '../../Dashboard/Clients&EarningsHeaders/ClientsEarningHeaders';
+import Hero from './Hero';
 
 const Home = () => {
     return (
         <div className=''>
-            <ClientsEarningHeaders/>
+            <Hero/>
         </div>
     );
 };

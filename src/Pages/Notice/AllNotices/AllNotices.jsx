@@ -29,7 +29,7 @@ const AllNotices = () => {
                 notices?.map((notice, index) => (
                     <article key={index + 1}>
                         <div className='flex items-center justify-between'>
-                            <button className={`px-4 py-2 rounded-3xl text-white ${index % 2 === 0 ? 'bg-purple-500' : 'bg-sky-500'} p-4`}>{notice?.Date}</button>
+                            <button className={`px-4 py-2 rounded-3xl text-white ${index % 2 === 0 ? 'bg-purple-500' : 'bg-blue-700'} p-4`}>{notice?.Date}</button>
                             <span className='italic opacity-50'>5 mins ago</span>
                         </div>
                         <p className='font-semibold text-justify py-2'>{notice?.Description}</p>

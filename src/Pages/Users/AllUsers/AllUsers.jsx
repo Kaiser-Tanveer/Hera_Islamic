@@ -9,6 +9,7 @@ const AllUsers = ({users}) => {
     const [description, setDescription] = useState('');
     const [filteredUsers, setFilteredUsers] = useState([]);
 
+    console.log(filteredUsers);
 
     const userBtnHandler = (data) => {
         setStatus(data?.UserType);
@@ -48,7 +49,7 @@ const AllUsers = ({users}) => {
                 <p className='opacity-50 text-center pb-6'>Click to see the categories</p>
                     {
                         categories.map(category =>
-                            <button key={category?.id} onClick={() =>userBtnHandler(category)} className='w-full py-2 mb-2 rounded-md border border-sky-100 bg-sky-500 text-xl text-white uppercase'>
+                            <button key={category?.id} onClick={() =>userBtnHandler(category)} className='w-full py-2 mb-2 rounded-md border border-sky-100 bg-blue-700 text-xl text-white uppercase'>
                                 {category.UserType}
                             </button>
                         )
@@ -59,7 +60,6 @@ const AllUsers = ({users}) => {
                     <p className='opacity-50 text-center'>{description}</p>
                     <FilteredUser 
                         filteredUsers={filteredUsers}
-                        users={users}
                     />
                 </div>
             </div>

@@ -114,7 +114,7 @@ const AttendanceSheet = () => {
                                                 <span className='text-red-500'>{(getDayName(dayIndex + 1).slice(0, 3))}</span>
                                             ) : (
                                                 <button onClick={() => toggleAttendance(studentIndex, dayIndex)} className='focus:outline-none'>
-                                                    {student.AttendanceStatus[dayIndex] === true ? <TiTick className='text-sky-500' /> : student.AttendanceStatus[dayIndex] === false ? <TiDelete className='text-red-500' /> : ''}
+                                                    {student.AttendanceStatus[dayIndex] === true ? <TiTick className='text-blue-700' /> : student.AttendanceStatus[dayIndex] === false ? <TiDelete className='text-red-500' /> : ''}
                                                 </button>
                                             )}
                                         </td>

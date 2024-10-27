@@ -36,7 +36,7 @@ const SingleUser = () => {
             </div>
 
             <div className='sideArticle bg-white rounded-md p-6 opacity-100 z-[100] shadow-lg flex items-start justify-center gap-8 w-full'>
-                <img src={user?.Photo} alt={user?.Name} className='w-[40%] h-full rounded-full border-4 border-sky-500' />
+                <img src={user?.Photo} alt={user?.Name} className='w-[40%] h-full rounded-full border-4 border-blue-700' />
                 <div>
                     <div className='w-full flex items-center justify-between text-xl font-bold'>
                         <h2 className='custom-underline'>{user?.Name}</h2>
@@ -45,7 +45,7 @@ const SingleUser = () => {
                                 !isEditing &&
                                 <button
                                 onClick={handleEditClick}
-                                className='flex items-center text-sky-500 border-b-2 border-sky-500 hover:border-sky-600 hover:text-sky-600 font-bold transition-all duration-300 transform hover:scale-105'
+                                className='flex items-center text-blue-700 border-b-2 border-blue-700 hover:border-sky-600 hover:text-sky-600 font-bold transition-all duration-300 transform hover:scale-105'
                             >
                                 <FaPen className='' />
                             </button>

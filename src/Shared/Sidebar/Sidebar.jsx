@@ -14,7 +14,7 @@ const Sidebar = () => {
         <aside className='sidebar w-full h-[100vh] overflow-auto pr-6 pb-6'>
             <div className='w-full flex flex-col gap-2'>
                 <NavLink to="/dashboard"  className={({isActive}) => 
-                isActive ? "border-b border-gray-200 px-4 py-2 text-sky-500 duration-500"
+                isActive ? "border-b border-gray-200 px-4 py-2 text-blue-700 duration-500"
                 :
                 "border-b border-gray-200 hover:border-white hover:bg-sky-50 px-4 py-2 duration-500"
                 }>
@@ -32,22 +32,22 @@ const Sidebar = () => {
                     {
                         stuOpen &&
                             <div className='flex flex-col bg-gray-100 rounded-b-md -mt-2'>
-                            <NavLink to="/students" className={({isActive}) => 
-                            isActive ? "flex items-center border-b border-gray-200 px-4 py-2 text-sky-500 duration-500"
+                            <NavLink to="/dashboard/students" className={({isActive}) => 
+                            isActive ? "flex items-center border-b border-gray-200 px-4 py-2 text-blue-700 duration-500"
                             :
                             "flex items-center border-b border-gray-200 hover:border-white hover:bg-sky-50 px-4 py-2 duration-500"
                             }>
                                 <HiChevronDoubleRight className='font-bold'/> <span>All Students</span>
                             </NavLink>
                             <NavLink to="admissionForm" className={({isActive}) => 
-                            isActive ? "flex items-center border-b border-gray-200 px-4 py-2 text-sky-500 duration-500"
+                            isActive ? "flex items-center border-b border-gray-200 px-4 py-2 text-blue-700 duration-500"
                             :
                             "flex items-center border-b border-gray-200 hover:border-white hover:bg-sky-50 px-4 py-2 duration-500"
                             }>
                             <HiChevronDoubleRight className='font-bold'/> <span>Admission Form</span>
                             </NavLink>
-                            <NavLink to="stuPromotion" className={({isActive}) => 
-                            isActive ? "flex items-center border-b rounded-b-md border-gray-200 px-4 py-2 text-sky-500 duration-500"
+                            <NavLink to="/dashboard/stuPromotion" className={({isActive}) => 
+                            isActive ? "flex items-center border-b rounded-b-md border-gray-200 px-4 py-2 text-blue-700 duration-500"
                             :
                             "flex items-center border-b border-gray-200 hover:border-white hover:bg-sky-50 px-4 py-2 duration-500"
                             }>
@@ -68,22 +68,22 @@ const Sidebar = () => {
                     {
                         teacherOpen &&
                             <div className='flex flex-col bg-gray-100 rounded-b-md -mt-2'>
-                            <NavLink to="/teachers" className={({isActive}) => 
-                            isActive ? "flex items-center border-b border-gray-200 px-4 py-2 text-sky-500 duration-500"
+                            <NavLink to="/dashboard/teachers" className={({isActive}) => 
+                            isActive ? "flex items-center border-b border-gray-200 px-4 py-2 text-blue-700 duration-500"
                             :
                             "flex items-center border-b border-gray-200 hover:border-white hover:bg-sky-50 px-4 py-2 duration-500"
                             }>
                                 <HiChevronDoubleRight className='font-bold'/> <span>All Teachers</span>
                             </NavLink>
-                            <NavLink to="addTeacher" className={({isActive}) => 
-                            isActive ? "flex items-center border-b border-gray-200 px-4 py-2 text-sky-500 duration-500"
+                            <NavLink to="/dashboard/addTeacher" className={({isActive}) => 
+                            isActive ? "flex items-center border-b border-gray-200 px-4 py-2 text-blue-700 duration-500"
                             :
                             "flex items-center border-b border-gray-200 hover:border-white hover:bg-sky-50 px-4 py-2 duration-500"
                             }>
                             <HiChevronDoubleRight className='font-bold'/> <span>Add Teacher</span>
                             </NavLink>
-                            <NavLink to="teacherPayment" className={({isActive}) => 
-                            isActive ? "flex items-center border-b rounded-b-md border-gray-200 px-4 py-2 text-sky-500 duration-500"
+                            <NavLink to="/dashboard/teacherPayment" className={({isActive}) => 
+                            isActive ? "flex items-center border-b rounded-b-md border-gray-200 px-4 py-2 text-blue-700 duration-500"
                             :
                             "flex items-center border-b border-gray-200 hover:border-white hover:bg-sky-50 px-4 py-2 duration-500"
                             }>
@@ -104,15 +104,15 @@ const Sidebar = () => {
                     {
                         libraryOpen &&
                             <div className='flex flex-col bg-gray-100 rounded-b-md -mt-2'>
-                            <NavLink to="/allBooks" className={({isActive}) => 
-                            isActive ? "flex items-center border-b border-gray-200 px-4 py-2 text-sky-500 duration-500"
+                            <NavLink to="/dashboard/allBooks" className={({isActive}) => 
+                            isActive ? "flex items-center border-b border-gray-200 px-4 py-2 text-blue-700 duration-500"
                             :
                             "flex items-center border-b border-gray-200 hover:border-white hover:bg-sky-50 px-4 py-2 duration-500"
                             }>
                                 <HiChevronDoubleRight className='font-bold'/> <span>All Books</span>
                             </NavLink>
-                            <NavLink to="addBook" className={({isActive}) => 
-                            isActive ? "flex items-center border-b border-gray-200 px-4 py-2 text-sky-500 duration-500"
+                            <NavLink to="/dashboard/addBook" className={({isActive}) => 
+                            isActive ? "flex items-center border-b border-gray-200 px-4 py-2 text-blue-700 duration-500"
                             :
                             "flex items-center border-b border-gray-200 hover:border-white hover:bg-sky-50 px-4 py-2 duration-500"
                             }>
@@ -132,22 +132,22 @@ const Sidebar = () => {
                     {
                         accOpen &&
                             <div className='flex flex-col bg-gray-100 rounded-b-md -mt-2'>
-                            <NavLink to="/allFees" className={({isActive}) => 
-                            isActive ? "flex items-center border-b border-gray-200 px-4 py-2 text-sky-500 duration-500"
+                            <NavLink to="/dashboard/allFees" className={({isActive}) => 
+                            isActive ? "flex items-center border-b border-gray-200 px-4 py-2 text-blue-700 duration-500"
                             :
                             "flex items-center border-b border-gray-200 hover:border-white hover:bg-sky-50 px-4 py-2 duration-500"
                             }>
                                 <HiChevronDoubleRight className='font-bold'/> <span>All Fees Collection</span>
                             </NavLink>
-                            <NavLink to="expenses" className={({isActive}) => 
-                            isActive ? "flex items-center border-b border-gray-200 px-4 py-2 text-sky-500 duration-500"
+                            <NavLink to="/dashboard/expenses" className={({isActive}) => 
+                            isActive ? "flex items-center border-b border-gray-200 px-4 py-2 text-blue-700 duration-500"
                             :
                             "flex items-center border-b border-gray-200 hover:border-white hover:bg-sky-50 px-4 py-2 duration-500"
                             }>
                             <HiChevronDoubleRight className='font-bold'/> <span>Expenses</span>
                             </NavLink>
-                            <NavLink to="addExpense" className={({isActive}) => 
-                            isActive ? "flex items-center border-b border-gray-200 px-4 py-2 text-sky-500 duration-500"
+                            <NavLink to="/dashboard/addExpense" className={({isActive}) => 
+                            isActive ? "flex items-center border-b border-gray-200 px-4 py-2 text-blue-700 duration-500"
                             :
                             "flex items-center border-b border-gray-200 hover:border-white hover:bg-sky-50 px-4 py-2 duration-500"
                             }>
@@ -167,15 +167,15 @@ const Sidebar = () => {
                     {
                         classesOpen &&
                             <div className='flex flex-col bg-gray-100 rounded-b-md -mt-2'>
-                            <NavLink to="/allClassSchedules" className={({isActive}) => 
-                            isActive ? "flex items-center border-b border-gray-200 px-4 py-2 text-sky-500 duration-500"
+                            <NavLink to="/dashboard/allClassSchedules" className={({isActive}) => 
+                            isActive ? "flex items-center border-b border-gray-200 px-4 py-2 text-blue-700 duration-500"
                             :
                             "flex items-center border-b border-gray-200 hover:border-white hover:bg-sky-50 px-4 py-2 duration-500"
                             }>
                                 <HiChevronDoubleRight className='font-bold'/> <span>All Classes</span>
                             </NavLink>
-                            <NavLink to="addNewClasses" className={({isActive}) => 
-                            isActive ? "flex items-center border-b border-gray-200 px-4 py-2 text-sky-500 duration-500"
+                            <NavLink to="/dashboard/addNewClasses" className={({isActive}) => 
+                            isActive ? "flex items-center border-b border-gray-200 px-4 py-2 text-blue-700 duration-500"
                             :
                             "flex items-center border-b border-gray-200 hover:border-white hover:bg-sky-50 px-4 py-2 duration-500"
                             }>
@@ -183,20 +183,20 @@ const Sidebar = () => {
                             </NavLink>
                         </div>
                     }
-                    <NavLink to="/subjects" className={({isActive}) => 
-                        isActive ? "flex items-center border-b border-gray-200 px-4 py-2 text-sky-500 duration-500"
+                    <NavLink to="/dashboard/subjects" className={({isActive}) => 
+                        isActive ? "flex items-center border-b border-gray-200 px-4 py-2 text-blue-700 duration-500"
                         :
                         "flex items-center border-b border-gray-200 hover:border-white hover:bg-sky-50 px-4 py-2 duration-500"
                         }> <span>Subjects</span>
                     </NavLink>
-                    <NavLink to="/classRoutines" className={({isActive}) => 
-                        isActive ? "flex items-center border-b border-gray-200 px-4 py-2 text-sky-500 duration-500"
+                    <NavLink to="/dashboard/classRoutines" className={({isActive}) => 
+                        isActive ? "flex items-center border-b border-gray-200 px-4 py-2 text-blue-700 duration-500"
                         :
                         "flex items-center border-b border-gray-200 hover:border-white hover:bg-sky-50 px-4 py-2 duration-500"
                         }> <span>Class Routines</span>
                     </NavLink>
-                    <NavLink to="/attendance" className={({isActive}) => 
-                        isActive ? "flex items-center border-b border-gray-200 px-4 py-2 text-sky-500 duration-500"
+                    <NavLink to="/dashboard/attendance" className={({isActive}) => 
+                        isActive ? "flex items-center border-b border-gray-200 px-4 py-2 text-blue-700 duration-500"
                         :
                         "flex items-center border-b border-gray-200 hover:border-white hover:bg-sky-50 px-4 py-2 duration-500"
                         }> <span>Student Attendance</span>
@@ -213,15 +213,15 @@ const Sidebar = () => {
                     {
                         examOpen &&
                             <div className='flex flex-col bg-gray-100 rounded-b-md -mt-2'>
-                            <NavLink to="/examSchedules" className={({isActive}) => 
-                            isActive ? "flex items-center border-b border-gray-200 px-4 py-2 text-sky-500 duration-500"
+                            <NavLink to="/dashboard/examSchedules" className={({isActive}) => 
+                            isActive ? "flex items-center border-b border-gray-200 px-4 py-2 text-blue-700 duration-500"
                             :
                             "flex items-center border-b border-gray-200 hover:border-white hover:bg-sky-50 px-4 py-2 duration-500"
                             }>
                                 <HiChevronDoubleRight className='font-bold'/> <span>Exam Schedules</span>
                             </NavLink>
-                            <NavLink to="/grades" className={({isActive}) => 
-                            isActive ? "flex items-center border-b border-gray-200 px-4 py-2 text-sky-500 duration-500"
+                            <NavLink to="/dashboard/grades" className={({isActive}) => 
+                            isActive ? "flex items-center border-b border-gray-200 px-4 py-2 text-blue-700 duration-500"
                             :
                             "flex items-center border-b border-gray-200 hover:border-white hover:bg-sky-50 px-4 py-2 duration-500"
                             }>
@@ -229,14 +229,14 @@ const Sidebar = () => {
                             </NavLink>
                         </div>
                     }
-                    <NavLink to="/notice" className={({isActive}) => 
-                    isActive ? "flex items-center border-b border-gray-200 px-4 py-2 text-sky-500 duration-500"
+                    <NavLink to="/dashboard/notice" className={({isActive}) => 
+                    isActive ? "flex items-center border-b border-gray-200 px-4 py-2 text-blue-700 duration-500"
                     :
                     "flex items-center border-b border-gray-200 hover:border-white hover:bg-sky-50 px-4 py-2 duration-500"
                     }><span>Notice</span>
                     </NavLink>
-                    <NavLink to="/users" className={({isActive}) => 
-                    isActive ? "flex items-center border-b border-gray-200 px-4 py-2 text-sky-500 duration-500"
+                    <NavLink to="/dashboard/users" className={({isActive}) => 
+                    isActive ? "flex items-center border-b border-gray-200 px-4 py-2 text-blue-700 duration-500"
                     :
                     "flex items-center border-b border-gray-200 hover:border-white hover:bg-sky-50 px-4 py-2 duration-500"
                     }><span>Users</span>

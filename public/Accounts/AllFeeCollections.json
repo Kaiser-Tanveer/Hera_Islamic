@@ -2,7 +2,7 @@
     {
         "ID": 1,
         "Photo": "https://picsum.photos/200/300?random=1",
-        "Name": "Alice Johnson",
+        "Name": "Aisha Khan",
         "Gender": "Female",
         "Class": "10",
         "Section": "A",
@@ -10,12 +10,12 @@
         "Amount": 5000,
         "Status": "Paid",
         "Phone": "123-456-7890",
-        "Email": "alice.johnson@example.com"
+        "Email": "aisha.khan@example.com"
     },
     {
         "ID": 2,
         "Photo": "https://picsum.photos/200/300?random=2",
-        "Name": "Bob Smith",
+        "Name": "Bilal Ahmed",
         "Gender": "Male",
         "Class": "9",
         "Section": "B",
@@ -23,12 +23,12 @@
         "Amount": 500,
         "Status": "Pending",
         "Phone": "234-567-8901",
-        "Email": "bob.smith@example.com"
+        "Email": "bilal.ahmed@example.com"
     },
     {
         "ID": 3,
         "Photo": "https://picsum.photos/200/300?random=3",
-        "Name": "Charlie Brown",
+        "Name": "Hamza Ali",
         "Gender": "Male",
         "Class": "10",
         "Section": "C",
@@ -36,12 +36,12 @@
         "Amount": 1500,
         "Status": "Paid",
         "Phone": "345-678-9012",
-        "Email": "charlie.brown@example.com"
+        "Email": "hamza.ali@example.com"
     },
     {
         "ID": 4,
         "Photo": "https://picsum.photos/200/300?random=4",
-        "Name": "Diana Prince",
+        "Name": "Fatima Noor",
         "Gender": "Female",
         "Class": "8",
         "Section": "A",
@@ -49,12 +49,12 @@
         "Amount": 5000,
         "Status": "Paid",
         "Phone": "456-789-0123",
-        "Email": "diana.prince@example.com"
+        "Email": "fatima.noor@example.com"
     },
     {
         "ID": 5,
         "Photo": "https://picsum.photos/200/300?random=5",
-        "Name": "Edward Green",
+        "Name": "Omar Khan",
         "Gender": "Male",
         "Class": "7",
         "Section": "B",
@@ -62,12 +62,12 @@
         "Amount": 400,
         "Status": "Pending",
         "Phone": "567-890-1234",
-        "Email": "edward.green@example.com"
+        "Email": "omar.khan@example.com"
     },
     {
         "ID": 6,
         "Photo": "https://picsum.photos/200/300?random=6",
-        "Name": "Fiona White",
+        "Name": "Zainab Fatima",
         "Gender": "Female",
         "Class": "10",
         "Section": "C",
@@ -75,12 +75,12 @@
         "Amount": 1200,
         "Status": "Paid",
         "Phone": "678-901-2345",
-        "Email": "fiona.white@example.com"
+        "Email": "zainab.fatima@example.com"
     },
     {
         "ID": 7,
         "Photo": "https://picsum.photos/200/300?random=7",
-        "Name": "George Black",
+        "Name": "Ibrahim Malik",
         "Gender": "Male",
         "Class": "9",
         "Section": "A",
@@ -88,12 +88,12 @@
         "Amount": 5500,
         "Status": "Overdue",
         "Phone": "789-012-3456",
-        "Email": "george.black@example.com"
+        "Email": "ibrahim.malik@example.com"
     },
     {
         "ID": 8,
         "Photo": "https://picsum.photos/200/300?random=8",
-        "Name": "Hannah Adams",
+        "Name": "Amina Syed",
         "Gender": "Female",
         "Class": "8",
         "Section": "B",
@@ -101,12 +101,12 @@
         "Amount": 450,
         "Status": "Paid",
         "Phone": "890-123-4567",
-        "Email": "hannah.adams@example.com"
+        "Email": "amina.syed@example.com"
     },
     {
         "ID": 9,
         "Photo": "https://picsum.photos/200/300?random=9",
-        "Name": "Ian Clark",
+        "Name": "Yusuf Khan",
         "Gender": "Male",
         "Class": "7",
         "Section": "C",
@@ -114,12 +114,12 @@
         "Amount": 1300,
         "Status": "Pending",
         "Phone": "901-234-5678",
-        "Email": "ian.clark@example.com"
+        "Email": "yusuf.khan@example.com"
     },
     {
         "ID": 10,
         "Photo": "https://picsum.photos/200/300?random=10",
-        "Name": "Julia Roberts",
+        "Name": "Sara Ali",
         "Gender": "Female",
         "Class": "10",
         "Section": "A",
@@ -127,6 +127,6 @@
         "Amount": 6000,
         "Status": "Paid",
         "Phone": "012-345-6789",
-        "Email": "julia.roberts@example.com"
+        "Email": "sara.ali@example.com"
     }
 ]

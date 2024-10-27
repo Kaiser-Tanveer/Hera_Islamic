@@ -25,142 +25,134 @@ import ExamGrades from "../Pages/Exams/ExamGrades/ExamGrades";
 import Notice from "../Pages/Notice/Notice";
 import Users from "../Pages/Users/Users";
 import SingleUser from "../Pages/Users/AllUsers/SingleUser";
+import Layout from "../Layouts/Layout";
 
 const Router = createBrowserRouter([
     {
         path: '*',
-        element: <NotFound/>
+        element: <NotFound />
     },
     {
         path: '/',
-        element: <DashboardLayout/>,
+        element: <Layout />,
         children: [
             {
                 path: '/',
                 element: <Home />,
             },
             {
-                path: '/dashboard',
-                element: <Home />,
+                path: 'admissionForm',  // Removed leading slash
+                element: <AdmissionForm />
+            }
+        ]
+    },
+    {
+        path: '/dashboard',
+        element: <DashboardLayout />,
+        children: [
+            {
+                path: '/dashboard/students',  // Removed leading slash
+                element: <AllStudents />
             },
             {
-                path: '/students',
-                element: <AllStudents/>
+                path: '/dashboard/teachers',  // Removed leading slash
+                element: <AllTeachers />
             },
             {
-                path: '/stu',
-                element: <SingleStudent/>
+                path: '/dashboard/stu',  // Removed leading slash
+                element: <SingleStudent />
             },
             {
-                path: '/admissionForm',
-                element: <AdmissionForm/>
+                path: '/dashboard/stuPromotion',  // Removed leading slash
+                element: <StudentPromotion />
             },
             {
-                path: '/stuPromotion',
-                element: <StudentPromotion/>
+                path: '/dashboard/teacher',  // Removed leading slash
+                element: <SingleTeacher />
             },
             {
-                path: '/teachers',
-                element: <AllTeachers/>
+                path: '/dashboard/addTeacher',  // Removed leading slash
+                element: <AddTeachers />
             },
             {
-                path: '/teacher',
-                element: <SingleTeacher/>
+                path: '/dashboard/teacherPayment',  // Removed leading slash
+                element: <TeacherPayment />
             },
             {
-                path: '/addTeacher',
-                element: <AddTeachers/>
+                path: '/dashboard/allBooks',  // Removed leading slash
+                element: <AllBooks />
             },
             {
-                path: '/teacherPayment',
-                element: <TeacherPayment/>
+                path: '/dashboard/addBook',  // Removed leading slash
+                element: <AddBook />
             },
             {
-                path: '/allBooks',
-                element: <AllBooks/>
+                path: '/dashboard/allFees',  // Removed leading slash
+                element: <AllFeesCollection />
             },
             {
-                path: '/addBook',
-                element: <AddBook/>
+                path: '/dashboard/expenses',  // Removed leading slash
+                element: <Expenses />
             },
             {
-                path: '/allFees',
-                element: <AllFeesCollection/>
+                path: '/dashboard/addExpense',  // Removed leading slash
+                element: <AddExpense />
             },
             {
-                path: '/expenses',
-                element: <Expenses/>
+                path: '/dashboard/allClassSchedules',  // Removed leading slash
+                element: <AllClasses />
             },
             {
-                path: '/addExpense',
-                element: <AddExpense/>
+                path: '/dashboard/addNewClasses',  // Removed leading slash
+                element: <AddClasses />
             },
             {
-                path: '/allClassSchedules',
-                element: <AllClasses/>
+                path: '/dashboard/subjects',  // Removed leading slash
+                element: <Subjects />
             },
             {
-                path: '/addNewClasses',
-                element: <AddClasses/>
+                path: '/dashboard/classRoutines',  // Removed leading slash
+                element: <ClassRoutine />
             },
             {
-                path: '/subjects',
-                element: <Subjects/>
+                path: '/dashboard/attendance',  // Removed leading slash
+                element: <Attendance />
             },
             {
-                path: '/classRoutines',
-                element: <ClassRoutine/>
+                path: '/dashboard/examSchedules',  // Removed leading slash
+                element: <Examinations />
             },
             {
-                path: '/attendance',
-                element: <Attendance/>
+                path: '/dashboard/grades',  // Removed leading slash
+                element: <ExamGrades />
             },
             {
-                path: '/examSchedules',
-                element: <Examinations/>
+                path: '/dashboard/notice',  // Removed leading slash
+                element: <Notice />
             },
             {
-                path: '/grades',
-                element: <ExamGrades/>
+                path: '/dashboard/users',  // Removed leading slash
+                element: <Users />
             },
             {
-                path: '/notice',
-                element: <Notice/>
-            },
-            {
-                path: '/users',
-                element: <Users/>
-            },
-            {
-                path: '/singleUser/:id',
+                path: '/dashboard/singleUser/:id',  // Removed leading slash
                 element: <SingleUser />,
                 loader: async ({ params }) => {
                     const response = await fetch('/Users/Users.json');
                     if (!response.ok) {
                         throw new Response('User data not found', { status: 404 });
                     }
-                
+
                     const users = await response.json();
                     const user = users?.find(user => user?.id === params?.id);
-                    console.log(user);
-                
+                    
                     if (!user) {
                         throw new Response('User not found', { status: 404 });
                     }
-                
+
                     return user;
                 }
-                
             }
-            
-            // {
-            //     path: '/logIn',
-            //     element: <LogIn />
-            // },
-            // {
-            //     path: '/reg',
-            //     element: <Register />
-            // },
         ]
     }
 ]);
