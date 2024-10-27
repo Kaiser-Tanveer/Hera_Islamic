@@ -1,12 +1,16 @@
 import React from 'react';
 import moment from 'moment';
 import ReusableForm from '../../../Components/SharedComponents/ReusableForm/ReusableForm';
+import toast from 'react-hot-toast';
+import { useNavigate } from 'react-router-dom';
 
 const AdmissionForm = () => {
+    const navigate = useNavigate();
     const imageHostKey = process.env.REACT_APP_IMG_KEY;
 
     const admissionFormHandler = (data) => {
-        const postedDate = moment().format('MMMM Do YYYY, h:mm:ss a');
+        const admissionDate = moment().format('MMMM Do YYYY, h:mm:ss a');
+        console.log(admissionDate);
         const image = data.img[0];
         const formData = new FormData();
         formData.append('image', image);
@@ -20,7 +24,8 @@ const AdmissionForm = () => {
                     console.log(imageUrl);
                 }
             });
-        console.log(data);
+        toast.success('Student Added Successfully');
+        navigate('/dashboard');
     };
 
     const fields = [

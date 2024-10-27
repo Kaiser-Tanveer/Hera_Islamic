@@ -38,7 +38,7 @@ const FeeChart = () => {
     
 
     return (
-        <Link to='/dashboard/allFees' className='bg-white border hover:border-sky-100 shadow-md rounded-md w-[60%] text-center pr-6 duration-500'>
+        <Link to='/dashboard/allFees' className='bg-white border border-white hover:border-sky-200 shadow-md rounded-md w-[65%] text-center pr-6 duration-500'>
             <h2 className='text-xl font-bold text-left p-6 rounded-t-md'>Fees</h2>
         <ResponsiveContainer width="100%" height={176}>
             <ComposedChart data={data}>
@@ -47,9 +47,9 @@ const FeeChart = () => {
                 <Tooltip />
                 <Legend />
                 <CartesianGrid stroke="#f5f5f5" />
-                <Area type="monotone" dataKey="amt" fill="#8884d8" stroke="#8884d8" />
-                <Bar dataKey="earning" barSize={20} fill="#413ea0" />
-                <Line type="monotone" dataKey="cost" stroke="#ff7300" />
+                <Area type="monotone" dataKey="amt" fill="#C8E6C9" stroke="#C8E6C9" />
+                <Bar dataKey="earning" barSize={8} fill="#4CAF50" />
+                <Line type="monotone" dataKey="cost" stroke="#F44336" />
             </ComposedChart>
         </ResponsiveContainer>  
         </Link>

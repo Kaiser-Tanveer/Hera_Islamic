@@ -5,7 +5,7 @@ const ReusableTable = ({ title, headers, data, tableLoading, renderRow }) => {
 
     return (
         <>
-            <h3 className='py-4 font-bold text-xl'>{title}</h3>
+            <h3 className='pb-4 pt-2 font-bold text-xl'>{title}</h3>
             <div className='overflow-auto'>
                 <table className="border border-gray-200 overflow-auto border-l-0 p-2 w-[100%]">
                     <thead>

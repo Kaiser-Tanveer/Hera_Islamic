@@ -1,12 +1,12 @@
 import React from 'react';
-import AttendanceChart from './AttendanceChart';
-import NoticeBoard from './NoticeBoard';
+import FeeChart from './FeeChart';
+import ClassRoutine from './ClassRoutine';
 
 const SecondRow = () => {
     return (
-        <div className='w-full h-64 mt-6 flex items-center justify-between gap-6 overflow-hidden'>
-            <AttendanceChart/>
-            <NoticeBoard/>
+        <div className='w-full h-[270px] mt-4 flex items-center justify-between gap-6 overflow-hidden'>
+            <FeeChart/>
+            <ClassRoutine/>
         </div>
     );
 };

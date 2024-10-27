@@ -38,7 +38,7 @@ const AttendanceChart = () => {
 
 
     return (
-      <Link to='/dashboard/attendance' className='bg-white border hover:border-sky-100 shadow-md rounded-md w-[60%] text-center pr-6 duration-500'>
+      <Link to='/dashboard/attendance' className='bg-white border border-white hover:border-sky-200 shadow-md rounded-md w-[60%] text-center pr-6 duration-500'>
           <h2 className='text-xl font-bold text-left p-6 rounded-t-md'>Attendance</h2>
           <ResponsiveContainer width="100%" height={176}>
               <BarChart data={attendanceData}>
@@ -47,8 +47,8 @@ const AttendanceChart = () => {
                   <YAxis />
                   <Tooltip />
                   <Legend />
-                  <Bar dataKey="present" fill="#3137fd" />
-                  <Bar dataKey="absent" fill="#00ab6b" />
+                  <Bar dataKey="present" barSize={8} fill="#3137fd" />
+                  <Bar dataKey="absent" barSize={8} fill="#F44336" />
               </BarChart>
           </ResponsiveContainer>
       </Link>
