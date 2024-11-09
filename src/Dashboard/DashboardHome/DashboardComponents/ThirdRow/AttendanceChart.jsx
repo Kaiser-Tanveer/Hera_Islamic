@@ -1,80 +1,57 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { Bar, BarChart, CartesianGrid, Legend, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts';
 
 const AttendanceChart = () => {
-    const [attendanceData, setAttendanceData] = useState([]);
-    const [loading, setLoading] = useState(false);
-    const [error, setError] = useState(null);
-    const [selectedDate, setSelectedDate] = useState("2024-10-01");
-    const dates = Array.from({ length: 31 }, (_, i) => {
-        const date = new Date(2024, 9, i + 1);
-        return date.toISOString().split('T')[0]; // YYYY-MM-DD format
-    }).filter(date => date <= "2024-10-31");
+  const attendanceData = [
+    { name: "Day 1", present: 20, absent: 10 },
+    { name: "Day 2", present: 22, absent: 8 },
+    { name: "Day 3", present: 18, absent: 12 },
+    { name: "Day 4", present: 25, absent: 5 },
+    { name: "Day 5", present: 30, absent: 0 },
+    { name: "Day 6", present: 28, absent: 2 },
+    { name: "Day 7", present: 20, absent: 10 },
+    { name: "Day 8", present: 21, absent: 9 },
+    { name: "Day 9", present: 19, absent: 11 },
+    { name: "Day 10", present: 25, absent: 5 },
+    { name: "Day 11", present: 27, absent: 3 },
+    { name: "Day 12", present: 30, absent: 0 },
+    { name: "Day 13", present: 24, absent: 6 },
+    { name: "Day 14", present: 22, absent: 8 },
+    { name: "Day 15", present: 18, absent: 12 },
+    { name: "Day 16", present: 25, absent: 5 },
+    { name: "Day 17", present: 30, absent: 0 },
+    { name: "Day 18", present: 28, absent: 2 },
+    { name: "Day 19", present: 20, absent: 10 },
+    { name: "Day 20", present: 21, absent: 9 },
+    { name: "Day 21", present: 19, absent: 11 },
+    { name: "Day 22", present: 25, absent: 5 },
+    { name: "Day 23", present: 27, absent: 3 },
+    { name: "Day 24", present: 30, absent: 0 },
+    { name: "Day 25", present: 24, absent: 6 },
+    { name: "Day 26", present: 22, absent: 8 },
+    { name: "Day 27", present: 18, absent: 12 },
+    { name: "Day 28", present: 25, absent: 5 },
+    { name: "Day 29", present: 30, absent: 0 },
+    { name: "Day 30", present: 28, absent: 2 },
+];
 
-    useEffect(() => {
-        setLoading(true);
-        fetch('/Attendance/AttendanceSheet.json')
-            .then(res => {
-                if (!res.ok) {
-                    throw new Error('Network response was not ok');
-                }
-                return res.json();
-            })
-            .then(data => {
-                setAttendanceData(data);
-                setLoading(false);
-            })
-            .catch(err => {
-                setError(err.message);
-                setLoading(false);
-            });
-    }, []);
-
-    const handleDateChange = (event) => {
-        setSelectedDate(event.target.value);
-    };
-
-    const attendanceForSelectedDate = attendanceData.filter(record => record.Date === selectedDate);
-
-    if (loading) return <div>Loading...</div>;
-    if (error) return <div>Error: {error}</div>;
 
     return (
-        <div className='bg-white rounded-md p-4 w-[80vw] h-[100vh]'>
-            <h3 className='py-4 font-bold text-xl text-center'>Attendance Sheet</h3>
-            <div className='mb-4'>
-                <label htmlFor="date-select" className="mr-2">Select Date:</label>
-                <select id="date-select" value={selectedDate} onChange={handleDateChange}>
-                    {dates.map(date => (
-                        <option key={date} value={date}>
-                            {new Date(date).toLocaleDateString('en-US')}
-                        </option>
-                    ))}
-                </select>
-            </div>
-            <div className='overflow-y-auto h-[72vh] pb-6'>
-                <table className="border border-gray-100 w-full">
-                    <thead>
-                        <tr>
-                            <th className='p-2'>Student Name</th>
-                            <th className='p-2'>Attendance Status</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {attendanceForSelectedDate.map((record, index) => (
-                            <tr key={index} className='border-y border-gray-200 odd:bg-gray-50 even:bg-white'>
-                                <td className='p-2'>{record.StudentName}</td>
-                                <td className='p-2 text-center'>{record.AttendanceStatus}</td>
-                            </tr>
-                        ))}
-                        {attendanceForSelectedDate.length === 0 && (
-                            <tr>
-                                <td colSpan="2" className='p-2 text-center'>No records found for this date.</td>
-                            </tr>
-                        )}
-                    </tbody>
-                </table>
-            </div>
-        </div>
+      <Link to='/dashboard/attendance' className='bg-white border border-white hover:border-sky-200 shadow-md rounded-md w-[60%] text-center pr-6 duration-500'>
+          <h2 className='text-xl font-bold text-left p-6 rounded-t-md'>Attendance</h2>
+          <ResponsiveContainer width="100%" height={176}>
+              <BarChart data={attendanceData}>
+                  <CartesianGrid strokeDasharray="3 3" />
+                  <XAxis dataKey="name" />
+                  <YAxis />
+                  <Tooltip />
+                  <Legend />
+                  <Bar dataKey="present" barSize={8} fill="rgb(59 130 246)" />
+                  <Bar dataKey="absent" barSize={8} fill="#F44336" />
+              </BarChart>
+          </ResponsiveContainer>
+      </Link>
     );
 };
 

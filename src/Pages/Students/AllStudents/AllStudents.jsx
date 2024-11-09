@@ -7,6 +7,7 @@ const AllStudents = () => {
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
     const [tableLoading, setTableLoading] = useState(true);
+    console.log(students);
 
     //---------------------- Table Loader ---------------------//
     useEffect(() => {
@@ -19,7 +20,7 @@ const AllStudents = () => {
 
     // Fetching Student Data 
     useEffect(() => {
-        fetch('/Students/Students.json')
+        fetch('http://localhost:3003/api/students')
             .then(res => {
                 if (!res.ok) {
                     throw new Error('Network response was not ok');
@@ -36,7 +37,7 @@ const AllStudents = () => {
             });
     }, []);
 
-    const stuTableHeader = ["Roll", "Photo", "Name", "Gender", "Class", "Section", "Parent", "Address", "Date of Birth", "Phone", "Email"]
+    const stuTableHeader = ["Roll", "Photo", "Name", "Gender", "Class", "Section", "Parent", "Address", "Date of Birth", "Phone"]
 
     const renderStudentRow = (student) => (
         <AllStudentData key={student.roll} student={student} />

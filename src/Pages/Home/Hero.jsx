@@ -1,5 +1,5 @@
 import React from 'react';
-import bg from '../../Assets/heroBG.jpg';
+import bg from '../../Assets/MainBG.jpg';
 import PrimaryBtn from '../../Components/SharedComponents/ReusableBtn/PrimaryBtn';
 
 const Hero = () => {

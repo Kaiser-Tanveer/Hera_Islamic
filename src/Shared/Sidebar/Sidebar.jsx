@@ -39,7 +39,7 @@ const Sidebar = () => {
                             }>
                                 <HiChevronDoubleRight className='font-bold'/> <span>All Students</span>
                             </NavLink>
-                            <NavLink to="admissionForm" className={({isActive}) => 
+                            <NavLink to="/dashboard/admissionForm" className={({isActive}) => 
                             isActive ? "flex items-center border-b border-gray-200 px-4 py-2 text-blue-700 duration-500"
                             :
                             "flex items-center border-b border-gray-200 hover:border-white hover:bg-sky-50 px-4 py-2 duration-500"

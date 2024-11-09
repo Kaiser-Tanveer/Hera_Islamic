@@ -3,7 +3,6 @@ import ReusableForm from '../../../Components/SharedComponents/ReusableForm/Reus
 
 const AddExpense = () => {
     const admissionFormHandler = (data) => {
-        console.log(data);
     }
     const fields = [
         { label: "ID", name: "id", required: true, type: "number", placeholder: 'Subject Code' },
@@ -19,6 +18,6 @@ const AddExpense = () => {
             <ReusableForm onSubmit={admissionFormHandler} fields={fields} columnCount={3} />
         </div>
         );
-    };
+    };  
 
 export default AddExpense;

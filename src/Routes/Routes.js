@@ -27,6 +27,7 @@ import Users from "../Pages/Users/Users";
 import SingleUser from "../Pages/Users/AllUsers/SingleUser";
 import Layout from "../Layouts/Layout";
 import DashboardHome from "../Dashboard/DashboardHome/DashboardHome";
+import Login from "../Pages/Auth/Login";
 
 const Router = createBrowserRouter([
     {
@@ -42,9 +43,9 @@ const Router = createBrowserRouter([
                 element: <Home />,
             },
             {
-                path: 'admissionForm',  // Removed leading slash
-                element: <AdmissionForm />
-            }
+                path: '/login',
+                element: <Login />
+            },
         ]
     },
     {
@@ -56,91 +57,95 @@ const Router = createBrowserRouter([
         element: <DashboardHome />,
             },
             {
-                path: '/dashboard/students',  // Removed leading slash
+                path: '/dashboard/students',
                 element: <AllStudents />
             },
             {
-                path: '/dashboard/teachers',  // Removed leading slash
+                path: 'admissionForm',
+                element: <AdmissionForm />
+            },
+            {
+                path: '/dashboard/teachers',
                 element: <AllTeachers />
             },
             {
-                path: '/dashboard/stu',  // Removed leading slash
+                path: '/dashboard/stu',
                 element: <SingleStudent />
             },
             {
-                path: '/dashboard/stuPromotion',  // Removed leading slash
+                path: '/dashboard/stuPromotion',
                 element: <StudentPromotion />
             },
             {
-                path: '/dashboard/teacher',  // Removed leading slash
+                path: '/dashboard/teacher',
                 element: <SingleTeacher />
             },
             {
-                path: '/dashboard/addTeacher',  // Removed leading slash
+                path: '/dashboard/addTeacher',
                 element: <AddTeachers />
             },
             {
-                path: '/dashboard/teacherPayment',  // Removed leading slash
+                path: '/dashboard/teacherPayment',
                 element: <TeacherPayment />
             },
             {
-                path: '/dashboard/allBooks',  // Removed leading slash
+                path: '/dashboard/allBooks',
                 element: <AllBooks />
             },
             {
-                path: '/dashboard/addBook',  // Removed leading slash
+                path: '/dashboard/addBook',
                 element: <AddBook />
             },
             {
-                path: '/dashboard/allFees',  // Removed leading slash
+                path: '/dashboard/allFees',
                 element: <AllFeesCollection />
             },
             {
-                path: '/dashboard/expenses',  // Removed leading slash
+                path: '/dashboard/expenses',
                 element: <Expenses />
             },
             {
-                path: '/dashboard/addExpense',  // Removed leading slash
+                path: '/dashboard/addExpense',
                 element: <AddExpense />
             },
             {
-                path: '/dashboard/allClassSchedules',  // Removed leading slash
+                path: '/dashboard/allClassSchedules',
                 element: <AllClasses />
             },
             {
-                path: '/dashboard/addNewClasses',  // Removed leading slash
+                path: '/dashboard/addNewClasses',
                 element: <AddClasses />
             },
             {
-                path: '/dashboard/subjects',  // Removed leading slash
+                path: '/dashboard/subjects',
                 element: <Subjects />
             },
             {
-                path: '/dashboard/classRoutines',  // Removed leading slash
+                path: '/dashboard/classRoutines',
                 element: <ClassRoutine />
             },
             {
-                path: '/dashboard/attendance',  // Removed leading slash
+                path: '/dashboard/attendance',
                 element: <Attendance />
             },
             {
-                path: '/dashboard/examSchedules',  // Removed leading slash
+                path: '/dashboard/examSchedules',
                 element: <Examinations />
             },
             {
-                path: '/dashboard/grades',  // Removed leading slash
+                path: '/dashboard/grades',
                 element: <ExamGrades />
             },
             {
-                path: '/dashboard/notice',  // Removed leading slash
+                path: '/dashboard/notice',
                 element: <Notice />
             },
             {
-                path: '/dashboard/users',  // Removed leading slash
+                path: '/dashboard/users',
                 element: <Users />
             },
             {
-                path: '/dashboard/singleUser/:id',  // Removed leading slash
+                path: '/dashboard/singleUser/:id',
                 element: <SingleUser />,
                 loader: async ({ params }) => {
                     const response = await fetch('/Users/Users.json');

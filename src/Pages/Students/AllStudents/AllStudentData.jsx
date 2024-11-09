@@ -7,22 +7,21 @@ const AllStudentData = ({student}) => {
             <td className='pr-2 py-2 text-nowrap'>{student?.roll}</td>
             <td className='p-2 text-nowrap'>
                 <Link to="/stu" className='flex items-center gap-2'>
-                    <img src={student?.studentImage} alt="" className='h-8 w-8 rounded-full' loading='lazy' />
+                    <img src={student?.img} alt="" className='h-8 w-8 rounded-full' loading='lazy' />
                 </Link>
             </td>
             <td className='p-2 text-nowrap'>
                 <Link to="/stu" className='flex items-center gap-2'>
-                    {student?.name}
+                    {student?.fName + ' ' + student.lName}
                 </Link>
             </td>
             <td className='p-2 text-nowrap'>{student?.gender}</td>
             <td className='p-2 text-nowrap'>{student?.class}</td>
             <td className='p-2 text-nowrap'>{student?.section}</td>
-            <td className='p-2 text-nowrap'>{student?.fathersName}</td>
+            <td className='p-2 text-nowrap'>{student?.parent}</td>
             <td className='p-2 text-nowrap'>{student?.address}</td>
-            <td className='p-2 text-nowrap'>{student?.dateOfBirth}</td>
+            <td className='p-2 text-nowrap'>{student?.DOB}</td>
             <td className='p-2 text-nowrap'>{student?.phone}</td>
-            <td className='pl-2 py-2 text-nowrap'>{student?.email}</td>
         </tr>
     );
 };

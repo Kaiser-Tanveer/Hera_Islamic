@@ -9,9 +9,10 @@ import { InputNumber } from '../ReusableInputs/InputNumber';
 import { InputTel } from '../ReusableInputs/InputTel';
 import { InputMail } from '../ReusableInputs/InputMail';
 import { InputTextarea } from '../ReusableInputs/InputTextarea';
+import { Oval } from 'react-loader-spinner';
 
 
-const ReusableForm = ({ onSubmit, fields, columnCount }) => {
+const ReusableForm = ({ onSubmit, fields, columnCount, loading }) => {
     const { register, handleSubmit, formState: { errors } } = useForm();
 
     // Determine the grid classes based on columnCount
@@ -39,17 +40,34 @@ const ReusableForm = ({ onSubmit, fields, columnCount }) => {
                 ))}
             </div>
             <div className='flex items-center justify-start gap-6 my-8'>
-                <input
+                <button
                     type="submit"
-                    value="SUBMIT"
-                    className='h-12 w-32 bg-blue-700 text-white font-semibold rounded-md border border-white hover:border-blue-700 hover:bg-white hover:text-blue-700 duration-500'
-                />
+                    disabled={loading}
+                    className={loading? 'h-12 w-32 bg-blue-700 text-white font-semibold rounded-md border border-white flex items-center justify-center gap-2' : 'h-12 w-32 bg-blue-700 text-white font-semibold rounded-md border border-white hover:border-blue-700 hover:bg-white hover:text-blue-700 duration-500 flex items-center justify-center gap-2'}
+                >
+                    {loading ? (
+                        <div className='p-1'>
+                        <Oval
+                            visible={true}
+                            height="30"
+                            width="30"
+                            color="white"         // Border color (outer spinner color)
+                            secondaryColor="white"  // Inner fill color
+                            ariaLabel="oval-loading"
+                            strokeWidth={8}         // Border thickness
+                        />
+                        </div>
+                    ) : (
+                        'SUBMIT'
+                    )}
+                </button>
                 <input
                     type="reset"
                     value="RESET"
                     className='h-12 w-32 border text-blue-700 border-blue-700 font-semibold rounded-md hover:bg-blue-700 hover:text-white duration-500'
                 />
             </div>
+
         </form>
     );
 };
