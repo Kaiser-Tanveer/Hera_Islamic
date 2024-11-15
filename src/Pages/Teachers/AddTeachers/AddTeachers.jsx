@@ -1,26 +1,14 @@
 import React from 'react';
 import ReusableForm from '../../../Components/SharedComponents/ReusableForm/ReusableForm';
-import moment from 'moment';
+import useFormSubmission from '../../../MyHooks/useFormSubmission';
+import { useNavigate } from 'react-router-dom';
 
 const AddTeachers = () => {
-    const admissionFormHandler = (data) => {
-        const imageHostKey = process.env.REACT_APP_IMG_KEY;
+    const { loading, submitForm } = useFormSubmission();
+    const navigate = useNavigate();
 
-        const postedDate = moment().format('MMMM Do YYYY, h:mm:ss a');
-        const image = data.img[0];
-        const formData = new FormData();
-        formData.append('image', image);
-        const url = `https://api.imgbb.com/1/upload?key=${imageHostKey}`;
-
-        fetch(url, { method: 'POST', body: formData })
-            .then(res => res.json())
-            .then(imgData => {
-                if (imgData.success) {
-                    const imageUrl = imgData.data.url;
-                    console.log(imageUrl);
-                }
-            });
-        console.log(data);
+    const addTeacherHandler = (data) => {
+        submitForm(data, "Teacher", "teachers", navigate);
     };
 
     const fields = [
@@ -35,16 +23,21 @@ const AddTeachers = () => {
         { label: "Email", name: "email", required: true, type: "email", placeholder: 'Email'},
         { label: "Class", name: "class", required: true, type: "select", placeholder: 'Class', options: ['01', '02', '03', '04', '05'] },
         { label: "Section", name: "section", required: true, type: "select", placeholder: 'Section', options: ['A', 'B', 'C', 'D'] },
+        { label: "Enter Parent Name", name: "parent", required: true, type: "text", placeholder: 'Parent'},
         { label: "Address", name: "address", required: true, type: "text", placeholder: 'Location'},
         { label: "Phone", name: "phone", required: true, type: "tel", placeholder: '018XXXXXXXX'},
         { label: "Short Bio", name: "bio", required: false, type: "text", placeholder: 'Write about the Teacher...'},
-        { label: "Upload Student Photo", name: "img", required: true, type: "file", placeholder: 'First Name'},
+        { label: "Upload Teacher's Photo", name: "img", required: true, type: "file", placeholder: 'First Name'},
     ];
 
     return (
         <div className='bg-white p-6 rounded-md rounded-e-md h-[95vh]'>
             <h2 className='pb-6 text-xl font-bold'>Add New Teacher</h2>
-            <ReusableForm onSubmit={admissionFormHandler} fields={fields} columnCount={4} />
+            <ReusableForm 
+                onSubmit={addTeacherHandler}
+                fields={fields}
+                columnCount={4}
+                loading={loading} />
         </div>
     );
 };

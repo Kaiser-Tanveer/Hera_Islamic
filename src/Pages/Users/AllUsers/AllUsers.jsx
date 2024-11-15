@@ -1,7 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import FilteredUser from './UserCategories/FilteredUser';
+import useUserActions from '../../../MyHooks/useUserAction';
 
 const AllUsers = ({users}) => {
+    const {updateUserType, deleteUser} = useUserActions();
+    const [showModal, setShowModal] =  useState(false);
+    const [userToDelete, setUserToDelete] = useState(null);
+
+
+
     const [categories, setCategories] = useState([]);
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(null);

@@ -28,7 +28,8 @@ const AllStudents = () => {
                 return res.json();
             })
             .then(data => {
-                setStudents(data);
+                const studentData = data.filter(item => item.userType === "Student");
+                setStudents(studentData);
                 setLoading(false);
             })
             .catch(err => {
@@ -37,10 +38,10 @@ const AllStudents = () => {
             });
     }, []);
 
-    const stuTableHeader = ["Roll", "Photo", "Name", "Gender", "Class", "Section", "Parent", "Address", "Date of Birth", "Phone"]
+    const stuTableHeader = ["Roll", "Photo", "Name", "Gender", "Class", "Section", "Parent", "Address", "Date of Birth", "Phone", "Role", "Action"]
 
     const renderStudentRow = (student) => (
-        <AllStudentData key={student.roll} student={student} />
+        <AllStudentData key={student.roll} student={student} students={students} setStudents={setStudents} />
     );
     return (
         <div className='bg-white rounded-md p-4 h-[96vh]'>
