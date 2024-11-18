@@ -4,24 +4,36 @@ import AllUsers from './AllUsers/AllUsers';
 
 const Users = () => {
     const [users, setUsers] = useState([]);
-    const [laoding, setLoading] = useState(true);
+    const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
+    const [tableLoading, setTableLoading] = useState(true);
 
+    //---------------------- Table Loader ---------------------//
     useEffect(() => {
-        fetch('/Users/Users.json')
-        .then(res => {
-            if(!res.ok){
-                throw new Error('Network response was not ok');
-            }
-            return res.json();
-        })
-        .then(data => {
-            setUsers(data);
-            setLoading(false);
-        }).catch(err => {
-            setError(err.messages);
-            setLoading(false);
-        })
+        const timer = setTimeout(() => {
+            setTableLoading(false);
+        }, 1000);
+
+        return () => clearTimeout(timer);
+    }, []);
+
+    // Fetching Student Data 
+    useEffect(() => {
+        fetch('http://localhost:3003/api/users')
+            .then(res => {
+                if (!res.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return res.json();
+            })
+            .then(data => {
+                setUsers(data);
+                setLoading(false);
+            })
+            .catch(err => {
+                setError(err.message);
+                setLoading(false);
+            });
     }, []);
     return (
         <div className='bg-gray-50 h-[96vh] overflow-auto'>
@@ -29,6 +41,7 @@ const Users = () => {
             <div className='mt-10'>
                 <AllUsers
                     users={users}
+                    setUsers={setUsers}
                 />
             </div>
         </div>

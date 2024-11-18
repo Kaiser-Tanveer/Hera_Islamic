@@ -24,9 +24,7 @@ const SingleUser = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        // Here you would typically send the updated data to your server
-        console.log("Updated User Data: ", formData);
-        setIsEditing(false); // Exit edit mode after submission
+        setIsEditing(false)
     };
 
     return (
