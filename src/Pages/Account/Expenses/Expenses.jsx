@@ -1,15 +1,13 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
 import ReusableTable from '../../../Components/SharedComponents/ReusableTable';
 import ExpenseData from './ExpenseData';
 
 const Expenses = () => {
     const [expenses, setExpenses] = useState([]);
-    const [laoding, setLoading] = useState(false);
+    const [loading, setLoading] = useState(false);
     const [error, setError] = useState(null);
     const [tableLoading, setTableLoading] = useState(true);
 
-    //---------------------- Table Loader ---------------------//
     useEffect(() => {
         const timer = setTimeout(() => {
             setTableLoading(false);
@@ -19,7 +17,7 @@ const Expenses = () => {
     }, []);
 
     useEffect(() => {
-        fetch('/Accounts/AllExpenses.json')
+        fetch('http://localhost:3003/api/expenses')
         .then(res => {
             if(!res.ok){
                 throw new Error('Network response was not ok');
@@ -30,24 +28,30 @@ const Expenses = () => {
             setExpenses(data);
             setLoading(false);
         }).catch(err => {
-            setError(err.messages);
-            setLoading(false)
+            setError(err.message);
+            setLoading(false);
         })
     }, []);
-    const paymentTableHeader = ["ID", "Name", "Expense Type", "Amount", "Status", "Phone", "Email", "Date"];
 
+    const paymentTableHeader = ["Expense Title", "Expense Type", "Status", "Payee Name", "Method", "Expense Date", "Added By", "Amount"];
 
-    const renderStudentRow = (expense) => (
-        <ExpenseData key={expense.ID} expense={expense} />
+    const totalAmount = Array.isArray(expenses)
+        ? expenses.reduce((total, expense) => total + Number(expense.amount || 0), 0)
+        : 0;
+
+    const renderExpenseRow = (expense) => (
+        <ExpenseData key={expense.ID} expense={expense} setExpenses={setExpenses} />
     );
+
     return (
-        <div className='bg-white rounded-md p-4 h-[96vh] overflow-auto'>
+        <div className="bg-white rounded-md p-4 h-[96vh] overflow-auto">
             <ReusableTable
-                title={"All Expenses"}
+                title="All Expenses"
                 headers={paymentTableHeader}
                 data={expenses}
                 tableLoading={tableLoading}
-                renderRow={renderStudentRow}
+                renderRow={renderExpenseRow}
+                totalAmount={totalAmount}
             />
         </div>
     );

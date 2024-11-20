@@ -1,13 +1,15 @@
 import React, { useEffect, useState } from 'react';
 import ReusableTable from '../../../Components/SharedComponents/ReusableTable';
 import AllBooksData from './AllBooksData';
+import NoData from '../../../Components/SharedComponents/NoData/NoData';
+import { TbBookOff } from 'react-icons/tb';
 
 const AllBooks = () => {
     const [books, setBooks] = useState([]);
     const [laoding, setLoading] = useState(false);
     const [error, setError] = useState(null);
     const [tableLoading, setTableLoading] = useState(true);
-
+console.log(books);
     //---------------------- Table Loader ---------------------//
     useEffect(() => {
         const timer = setTimeout(() => {
@@ -18,7 +20,7 @@ const AllBooks = () => {
     }, []);
 
     useEffect(() => {
-        fetch('/Books/Books.json')
+        fetch('http://localhost:3003/api/library')
         .then(res => {
             if(!res.ok){
                 throw new Error('Network response was not ok');
@@ -33,7 +35,7 @@ const AllBooks = () => {
             setLoading(false)
         })
     }, []);
-    const paymentTableHeader = ["ID", "Book Name", "Subject", "Writer", "Class", "Published Date", "Created Date"];
+    const paymentTableHeader = ["Sub Code", "Book Name", "Subject", "Writer", "Class", "Section", "Published Date", "Created Date"];
 
 
     const renderStudentRow = (book) => (
@@ -41,13 +43,22 @@ const AllBooks = () => {
     );
     return (
         <div className='bg-white rounded-md p-4 h-[96vh] overflow-auto'>
-            <ReusableTable
+            
+            {
+                books.length > 0 ?
+                <ReusableTable
                 title={"Teacher's Payments"}
                 headers={paymentTableHeader}
                 data={books}
                 tableLoading={tableLoading}
                 renderRow={renderStudentRow}
             />
+            :
+            <NoData
+                message={`No Books Available`}
+                icon={<TbBookOff />}
+            />
+            }
         </div>
     );
 };

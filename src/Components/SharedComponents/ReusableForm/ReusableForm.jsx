@@ -25,7 +25,7 @@ const ReusableForm = ({ onSubmit, fields, columnCount, loading }) => {
     return (
         <form onSubmit={handleSubmit(onSubmit)}>
             <div className={`grid gap-6 ${gridClasses[columnCount]}`}>
-                {fields.map((field, index) => (
+                {fields?.map((field, index) => (
                     <div key={index} className='w-full'>
                         {field.type === 'text' && <InputText {...field} register={register} errors={errors} />}
                         {field.type === 'select' && <InputSelect {...field} register={register} errors={errors} />}
@@ -51,10 +51,10 @@ const ReusableForm = ({ onSubmit, fields, columnCount, loading }) => {
                             visible={true}
                             height="30"
                             width="30"
-                            color="white"         // Border color (outer spinner color)
-                            secondaryColor="white"  // Inner fill color
+                            color="white" 
+                            secondaryColor="white"
                             ariaLabel="oval-loading"
-                            strokeWidth={8}         // Border thickness
+                            strokeWidth={8}
                         />
                         </div>
                     ) : (

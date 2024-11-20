@@ -1,10 +1,10 @@
 import React from 'react';
 import ReusableForm from '../../../Components/SharedComponents/ReusableForm/ReusableForm';
-import useFormSubmission from '../../../MyHooks/useFormSubmission';
+import useUserFormSubmission from '../../../MyHooks/useUserFormSubmission';
 import { useNavigate } from 'react-router-dom';
 
 const AddTeachers = () => {
-    const { loading, submitForm } = useFormSubmission();
+    const { loading, submitForm } = useUserFormSubmission();
     const navigate = useNavigate();
 
     const addTeacherHandler = (data) => {

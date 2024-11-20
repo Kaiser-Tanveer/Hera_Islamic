@@ -1,8 +1,7 @@
 import React from 'react';
 import TableLoader from '../../Shared/Loaders/TableLoader';
 
-const ReusableTable = ({ title, headers, data, tableLoading, renderRow }) => {
-
+const ReusableTable = ({ title, headers, data, tableLoading, renderRow, totalAmount }) => {
     return (
         <>
             <h3 className='pb-4 pt-2 font-bold text-xl'>{title}</h3>
@@ -22,6 +21,15 @@ const ReusableTable = ({ title, headers, data, tableLoading, renderRow }) => {
                             data.map(renderRow)
                         )}
                     </tbody>
+                    
+                    {totalAmount !== undefined && totalAmount !== null && (
+                        <tfoot>
+                            <tr className="font-bold">
+                                <td colSpan={headers.length - 1} className="text-right px-4 py-2">Total Amount:</td>
+                                <td className="px-4 py-2 text-right text-red-500">৳{totalAmount}/-</td>
+                            </tr>
+                        </tfoot>
+                    )}
                 </table>
             </div>
         </>
