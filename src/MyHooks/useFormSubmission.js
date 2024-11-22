@@ -12,13 +12,13 @@ const useFormSubmission = () => {
     successMessage = "Operation successful!",
     errorMessage = "Operation failed.",
     redirectPath = "/",
-    additionalFields = {}, // Add dynamic fields like timestamps or metadata
+    additionalFields = {},
   }) => {
     setLoading(true);
 
     const submittedData = {
       ...data,
-      ...additionalFields, // Include additional data dynamically
+      ...additionalFields,
     };
 
     try {

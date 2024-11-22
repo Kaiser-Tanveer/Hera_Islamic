@@ -25,7 +25,6 @@ const useEditDelete = () => {
                     throw new Error(`Unexpected response: ${response.statusText}`);
                 }
             }
-    
             return response.json();
         } catch (error) {
             console.error('API Error:', error.message);
