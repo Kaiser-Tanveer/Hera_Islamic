@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import ReusableTable from '../../../Components/SharedComponents/ReusableTable';
 import ExpenseData from './ExpenseData';
+import NoData from '../../../Components/SharedComponents/NoData/NoData';
+import { GiExpense } from 'react-icons/gi';
 
 const Expenses = () => {
     const [expenses, setExpenses] = useState([]);
@@ -45,6 +47,8 @@ const Expenses = () => {
 
     return (
         <div className="bg-white rounded-md p-4 h-[96vh] overflow-auto">
+        {
+            expenses.length > 0 ?
             <ReusableTable
                 title="All Expenses"
                 headers={paymentTableHeader}
@@ -53,6 +57,12 @@ const Expenses = () => {
                 renderRow={renderExpenseRow}
                 totalAmount={totalAmount}
             />
+            :
+            <NoData
+                message={`No expense Available`}
+                icon={<GiExpense />}
+            />
+            }
         </div>
     );
 };
