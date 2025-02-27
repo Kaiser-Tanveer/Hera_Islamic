@@ -46,6 +46,10 @@ const Router = createBrowserRouter([
                 path: '/login',
                 element: <Login />
             },
+            {
+                path: '/admissionForm',
+                element: <AdmissionForm />
+            },
         ]
     },
     {
@@ -61,7 +65,7 @@ const Router = createBrowserRouter([
                 element: <AllStudents />
             },
             {
-                path: 'admissionForm',
+                path: '/dashboard/admissionForm',
                 element: <AdmissionForm />
             },
             {
