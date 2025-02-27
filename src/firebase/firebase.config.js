@@ -1,14 +1,13 @@
 import { initializeApp } from "firebase/app";
 
-
 const firebaseConfig = {
-  apiKey: "AIzaSyA_gqbPFo3-TGE3p3NJVv8Q5a_JD7OixJM",
-  authDomain: "hera-islamic-academy.firebaseapp.com",
-  projectId: "hera-islamic-academy",
-  storageBucket: "hera-islamic-academy.firebasestorage.app",
-  messagingSenderId: "558158877187",
-  appId: "1:558158877187:web:c9ca4e24f473bc34bab436",
-  measurementId: "G-SMKZYZH6T2"
+  apiKey: process.env.REACT.APP.apiKey,
+  authDomain: process.env.REACT.APP.authDomain,
+  projectId: process.env.REACT.APP.projectId,
+  storageBucket: process.env.REACT.APP.storageBucket,
+  messagingSenderId: process.env.REACT.APP.messagingSenderId,
+  appId: process.env.REACT.APP.appId,
+  measurementId: process.env.REACT.APP.measurementId,
 };
 
 // Initialize Firebase
