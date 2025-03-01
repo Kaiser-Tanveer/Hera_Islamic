@@ -3,7 +3,6 @@ import ReusableForm from '../../Components/SharedComponents/ReusableForm/Reusabl
 
 const AddSubjects = () => {
 const admissionFormHandler = (data) => {
-    console.log(data);
 };
 
 const fields = [
