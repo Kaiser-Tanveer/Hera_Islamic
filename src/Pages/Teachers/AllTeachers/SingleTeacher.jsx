@@ -5,7 +5,6 @@ import { useLoaderData } from 'react-router-dom';
 
 const SingleTeacher = () => {
     const teacher = useLoaderData({});
-    console.log(teacher);
     return (
         <div className='bg-white rounded-md p-6 h-[95vh] overflow-y-scroll'>
             <div className='flex items-start justify-center gap-8'>
