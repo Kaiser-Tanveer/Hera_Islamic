@@ -8,7 +8,6 @@ const AddUser = () => {
 
     // Handler for the form submission
     const admissionFormHandler = async (data) => {
-        console.log(data);
         setLoading(true);
 
         try {
