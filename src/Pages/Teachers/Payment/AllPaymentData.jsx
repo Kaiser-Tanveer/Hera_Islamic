@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 
 const AllPaymentData = ({payment}) => {
     const statusHandler = (Status) => {
-        console.log(Status);
     }
     return (
         <tr key={payment?.ID} className='border-y border-gray-200 odd:bg-gray-50 even:bg-white hover:odd:bg-gray-100'>
@@ -23,7 +22,6 @@ const AllPaymentData = ({payment}) => {
             <td className='p-2 text-nowrap'>{payment?.Subject}</td>
             <td className='p-2 text-nowrap'>
                 <p onClick={() => {
-                console.log("Paragraph clicked");
                 statusHandler(payment?.Status);
                 }} className={payment?.Status === "Active" ? "opacity-100 text-green-500" : "opacity-40"}>
                     &#2547; {payment?.Amount}
