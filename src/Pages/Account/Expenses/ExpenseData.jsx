@@ -7,7 +7,6 @@ const ExpenseData = ({ expense, setExpenses }) => {
 
     const handleFieldUpdate = (e, fieldName, expense) => {
         updateField(e, fieldName, expense, setExpenses, 'expenses');
-        console.log(e.target.value, fieldName, expense._id, 'expenses');
     };
 
     return (
