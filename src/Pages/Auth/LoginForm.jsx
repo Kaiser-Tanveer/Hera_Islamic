@@ -3,7 +3,6 @@ import ReusableForm from '../../Components/SharedComponents/ReusableForm/Reusabl
 
 const LoginForm = () => {
     const admissionFormHandler = (data) => {
-        console.log(data);
     }
     const fields = [
         { label: "Enter Your Email", name: "email", required: true, type: "email", placeholder: 'Enter Your Email'},
