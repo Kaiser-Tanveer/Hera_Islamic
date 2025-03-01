@@ -9,7 +9,6 @@ const AllStudents = () => {
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
     const [tableLoading, setTableLoading] = useState(true);
-    console.log(students);
 
     //---------------------- Table Loader ---------------------//
     useEffect(() => {
