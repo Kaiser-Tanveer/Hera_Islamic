@@ -9,7 +9,6 @@ const AllBooks = () => {
     const [laoding, setLoading] = useState(false);
     const [error, setError] = useState(null);
     const [tableLoading, setTableLoading] = useState(true);
-console.log(books);
     //---------------------- Table Loader ---------------------//
     useEffect(() => {
         const timer = setTimeout(() => {
