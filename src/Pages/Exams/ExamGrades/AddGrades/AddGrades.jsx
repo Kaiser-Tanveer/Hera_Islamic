@@ -3,7 +3,6 @@ import ReusableForm from '../../../../Components/SharedComponents/ReusableForm/R
 
 const AddGrades = () => {
     const admissionFormHandler = (data) => {
-        console.log(data);
     };
     
     const fields = [
