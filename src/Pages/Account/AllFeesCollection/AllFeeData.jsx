@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 
 const AllFeeData = ({feeCollection}) => {
     const feeStatusHandler = (status) => {
-        console.log(status);
     }
     return (
             <tr className={feeCollection?.Status === "Overdue" ? 'border-y border-gray-200 bg-red-100 hover:animate-none duration-500 animate-pulse' : feeCollection?.Status === "Paid" ? 'border-y border-gray-200 bg-green-50': 'border-y border-gray-200 bg-gray-50 hover:bg-gray-100'}>
